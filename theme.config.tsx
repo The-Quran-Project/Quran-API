@@ -2,16 +2,16 @@ import React from "react"
 import { DocsThemeConfig } from "nextra-theme-docs"
 
 const config: DocsThemeConfig = {
-  logo: <span>Contest Hive</span>,
+  logo: <span>Quran API</span>,
   project: {
-    link: "https://github.com/Contest-Hive/Contest-Hive",
+    link: "https://github.com/Nusab19/Quran-API",
   },
   chat: {
     link: "https://discordid.netlify.app/?id=804035616420397086",
   },
-  docsRepositoryBase: "https://github.com/Contest-Hive/docs/tree/main/",
+  docsRepositoryBase: "https://github.com/Quran-API/docs/tree/main/",
   footer: {
-    text: "© Contest Hive 2023 - All rights reserved.",
+    text: "© Quran API 2023 - All rights reserved.",
   },
 }
 

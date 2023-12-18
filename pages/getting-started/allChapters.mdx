@@ -1,0 +1,46 @@
+---
+title: Get all Surahs' info from the Quran
+description: Get all Surahs' info from the Quran. This is a free API to get all Surahs' info from the Quran. It returns the Surahs' names, number of verses, and more.
+---
+
+## Request Format
+
+Make a **GET** request to `/api/surah.json`
+
+## Response
+
+An array of all Surahs' info from the Quran.
+
+### Example Response
+
+Endpoint: [`api/surah.json`](https://quranapi.pages.dev/api/surah.json)
+
+```json copy
+[
+    {
+        "surahName": "Al-Faatiha",
+        "surahNameArabic": "الفاتحة",
+        "surahNameArabicLong": "سُورَةُ ٱلْفَاتِحَةِ",
+        "surahNameTranslation": "The Opening",
+        "revelationPlace": "Mecca",
+        "totalAyah": 7
+    },
+    {
+        "surahName": "Al-Baqara",
+        "surahNameArabic": "البقرة",
+        "surahNameArabicLong": "سورة البقرة",
+        "surahNameTranslation": "The Cow",
+        "revelationPlace": "Madina",
+        "totalAyah": 286
+    },
+    {
+        "surahName": "Aal-i-Imraan",
+        "surahNameArabic": "آل عمران",
+        "surahNameArabicLong": "سورة آل عمران",
+        "surahNameTranslation": "The Family of Imraan",
+        "revelationPlace": "Madina",
+        "totalAyah": 200
+    },
+  ...
+]
+```

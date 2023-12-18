@@ -1,0 +1,50 @@
+---
+title: How to get an Surah?
+description: How to get an surah/chapter from the Quran using the Quran API.
+---
+
+## Request Format
+
+Make a **GET** request to `/<surahNo>.json`
+
+Replace `<surahNo>` with the Surah Number.
+
+> **NOTE:** `surahNo` must be between `1` and `114`
+
+## Response
+
+A _JSON_ object containing the whole surah.
+
+### Example Response
+
+Endpoint: [`/api/112.json`](https://quranapi.pages.dev/api/112.json)
+
+```json copy
+{
+  "surahName": "Al-Ikhlaas",
+  "surahNameArabic": "الإخلاص",
+  "surahNameArabicLong": "سورة الإخلاص",
+  "surahNameTranslation": "Sincerity",
+  "revelationPlace": "Mecca",
+  "totalAyah": 4,
+  "surahNo": 112,
+  "english": [
+    "Say, ˹O Prophet,˺ “He is Allah—One ˹and Indivisible˺;",
+    "Allah—the Sustainer ˹needed by all˺.",
+    "He has never had offspring, nor was He born.",
+    "And there is none comparable to Him.”"
+  ],
+  "arabic1": [
+    " قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+    "ٱللَّهُ ٱلصَّمَدُ",
+    "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+    "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ"
+  ],
+  "arabic2": [
+    "قل هو الله احد",
+    "الله الصمد",
+    "لم يلد ولم يولد",
+    "ولم يكن له كفوا احد"
+  ]
+}
+```

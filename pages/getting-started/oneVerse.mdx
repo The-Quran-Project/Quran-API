@@ -1,0 +1,46 @@
+---
+title: How to get an Ayah?
+description: How to get an ayah/verse from the Quran using the Quran API.
+---
+
+## Request Format
+
+Make a **GET** request to `/<surahNo>/<ayahNo>.json`
+
+Replace `<surahNo>` with the Surah Number and `<ayahNo>` with the Ayah Number.
+
+> **NOTE:** `surahNo` must be between `1` and `114`. `ayahNo` must be between 1 and the total number of Ayahs in the Surah.
+
+## Response
+
+A _JSON_ object containing informations about the Ayah.
+
+### Example Response
+
+Endpoint: [`/api/1/2.json`](https://quranapi.pages.dev/api/1/2.json)
+
+```json copy
+{
+  "surahName": "Al-Faatiha",
+  "surahNameArabic": "الفاتحة",
+  "surahNameArabicLong": "سُورَةُ ٱلْفَاتِحَةِ",
+  "surahNameTranslation": "The Opening",
+  "revelationPlace": "Mecca",
+  "totalAyah": 7,
+  "surahNo": 1,
+  "ayahNo": 2,
+  "english": "All praise is for Allah—Lord of all worlds",
+  "arabic1": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+  "arabic2": "الحمد لله رب العالمين",
+  "audio": {
+    "1": {
+      "reciter": "Mishary Rashid Al-Afasy",
+      "url": "https://quranaudio.pages.dev/1/1_2.mp3"
+    },
+    "2": {
+      "reciter": "Abu Bakr Al-Shatri",
+      "url": "https://quranaudio.pages.dev/2/1_2.mp3"
+    }
+  }
+}
+```

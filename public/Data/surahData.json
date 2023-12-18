@@ -1,0 +1,800 @@
+[
+  {
+    "surahName": "Al-Faatiha",
+    "surahNameAr": "الفاتحة",
+    "surahNameArLong": "سُورَةُ ٱلْفَاتِحَةِ",
+    "surahNameMeaning": "The Opening",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Baqara",
+    "surahNameAr": "البقرة",
+    "surahNameArLong": "سورة البقرة",
+    "surahNameMeaning": "The Cow",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Aal-i-Imraan",
+    "surahNameAr": "آل عمران",
+    "surahNameArLong": "سورة آل عمران",
+    "surahNameMeaning": "The Family of Imraan",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "An-Nisaa",
+    "surahNameAr": "النساء",
+    "surahNameArLong": "سورة النساء",
+    "surahNameMeaning": "The Women",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Maaida",
+    "surahNameAr": "المائدة",
+    "surahNameArLong": "سورة المائدة",
+    "surahNameMeaning": "The Table",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-An'aam",
+    "surahNameAr": "الأنعام",
+    "surahNameArLong": "سورة الأنعام",
+    "surahNameMeaning": "The Cattle",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-A'raaf",
+    "surahNameAr": "الأعراف",
+    "surahNameArLong": "سورة الأعراف",
+    "surahNameMeaning": "The Heights",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Anfaal",
+    "surahNameAr": "الأنفال",
+    "surahNameArLong": "سورة الأنفال",
+    "surahNameMeaning": "The Spoils of War",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "At-Tawba",
+    "surahNameAr": "التوبة",
+    "surahNameArLong": "سورة التوبة",
+    "surahNameMeaning": "The Repentance",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Yunus",
+    "surahNameAr": "يونس",
+    "surahNameArLong": "سورة يونس",
+    "surahNameMeaning": "Jonas",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Hud",
+    "surahNameAr": "هود",
+    "surahNameArLong": "سورة هود",
+    "surahNameMeaning": "Hud",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Yusuf",
+    "surahNameAr": "يوسف",
+    "surahNameArLong": "سورة يوسف",
+    "surahNameMeaning": "Joseph",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Ar-Ra'd",
+    "surahNameAr": "الرعد",
+    "surahNameArLong": "سورة الرعد",
+    "surahNameMeaning": "The Thunder",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Ibrahim",
+    "surahNameAr": "ابراهيم",
+    "surahNameArLong": "سورة ابراهيم",
+    "surahNameMeaning": "Abraham",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Hijr",
+    "surahNameAr": "الحجر",
+    "surahNameArLong": "سورة الحجر",
+    "surahNameMeaning": "The Rock",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "An-Nahl",
+    "surahNameAr": "النحل",
+    "surahNameArLong": "سورة النحل",
+    "surahNameMeaning": "The Bee",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Israa",
+    "surahNameAr": "الإسراء",
+    "surahNameArLong": "سورة الإسراء",
+    "surahNameMeaning": "The Night Journey",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Kahf",
+    "surahNameAr": "الكهف",
+    "surahNameArLong": "سورة الكهف",
+    "surahNameMeaning": "The Cave",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Maryam",
+    "surahNameAr": "مريم",
+    "surahNameArLong": "سورة مريم",
+    "surahNameMeaning": "Mary",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Taa-Haa",
+    "surahNameAr": "طه",
+    "surahNameArLong": "سورة طه",
+    "surahNameMeaning": "Taa-Haa",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Anbiyaa",
+    "surahNameAr": "الأنبياء",
+    "surahNameArLong": "سورة الأنبياء",
+    "surahNameMeaning": "The Prophets",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Hajj",
+    "surahNameAr": "الحج",
+    "surahNameArLong": "سورة الحج",
+    "surahNameMeaning": "The Pilgrimage",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Muminoon",
+    "surahNameAr": "المؤمنون",
+    "surahNameArLong": "سورة المؤمنون",
+    "surahNameMeaning": "The Believers",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "An-Noor",
+    "surahNameAr": "النور",
+    "surahNameArLong": "سورة النور",
+    "surahNameMeaning": "The Light",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Furqaan",
+    "surahNameAr": "الفرقان",
+    "surahNameArLong": "سورة الفرقان",
+    "surahNameMeaning": "The Criterion",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Ash-Shu'araa",
+    "surahNameAr": "الشعراء",
+    "surahNameArLong": "سورة الشعراء",
+    "surahNameMeaning": "The Poets",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "An-Naml",
+    "surahNameAr": "النمل",
+    "surahNameArLong": "سورة النمل",
+    "surahNameMeaning": "The Ant",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Qasas",
+    "surahNameAr": "القصص",
+    "surahNameArLong": "سورة القصص",
+    "surahNameMeaning": "The Stories",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Ankaboot",
+    "surahNameAr": "العنكبوت",
+    "surahNameArLong": "سورة العنكبوت",
+    "surahNameMeaning": "The Spider",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Ar-Room",
+    "surahNameAr": "الروم",
+    "surahNameArLong": "سورة الروم",
+    "surahNameMeaning": "The Romans",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Luqman",
+    "surahNameAr": "لقمان",
+    "surahNameArLong": "سورة لقمان",
+    "surahNameMeaning": "Luqman",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "As-Sajda",
+    "surahNameAr": "السجدة",
+    "surahNameArLong": "سورة السجدة",
+    "surahNameMeaning": "The Prostration",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Ahzaab",
+    "surahNameAr": "الأحزاب",
+    "surahNameArLong": "سورة الأحزاب",
+    "surahNameMeaning": "The Clans",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Saba",
+    "surahNameAr": "سبإ",
+    "surahNameArLong": "سورة سَبَأ",
+    "surahNameMeaning": "Sheba",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Faatir",
+    "surahNameAr": "فاطر",
+    "surahNameArLong": "سورة فاطر",
+    "surahNameMeaning": "The Originator",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Yaseen",
+    "surahNameAr": "يس",
+    "surahNameArLong": "سورة يس",
+    "surahNameMeaning": "Yaseen",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "As-Saaffaat",
+    "surahNameAr": "الصافات",
+    "surahNameArLong": "سورة الصافات",
+    "surahNameMeaning": "Those drawn up in Ranks",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Saad",
+    "surahNameAr": "ص",
+    "surahNameArLong": "سورة ص",
+    "surahNameMeaning": "The letter Saad",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Az-Zumar",
+    "surahNameAr": "الزمر",
+    "surahNameArLong": "سورة الزمر",
+    "surahNameMeaning": "The Groups",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Ghafir",
+    "surahNameAr": "غافر",
+    "surahNameArLong": "سورة غافر",
+    "surahNameMeaning": "The Forgiver",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Fussilat",
+    "surahNameAr": "فصلت",
+    "surahNameArLong": "سورة فصلت",
+    "surahNameMeaning": "Explained in detail",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Ash-Shura",
+    "surahNameAr": "الشورى",
+    "surahNameArLong": "سورة الشورى",
+    "surahNameMeaning": "Consultation",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Az-Zukhruf",
+    "surahNameAr": "الزخرف",
+    "surahNameArLong": "سورة الزخرف",
+    "surahNameMeaning": "Ornaments of gold",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Ad-Dukhaan",
+    "surahNameAr": "الدخان",
+    "surahNameArLong": "سورة الدخان",
+    "surahNameMeaning": "The Smoke",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Jaathiya",
+    "surahNameAr": "الجاثية",
+    "surahNameArLong": "سورة الجاثية",
+    "surahNameMeaning": "Crouching",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Ahqaf",
+    "surahNameAr": "الأحقاف",
+    "surahNameArLong": "سورة الأحقاف",
+    "surahNameMeaning": "The Dunes",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Muhammad",
+    "surahNameAr": "محمد",
+    "surahNameArLong": "سورة محمد",
+    "surahNameMeaning": "Muhammad",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Fath",
+    "surahNameAr": "الفتح",
+    "surahNameArLong": "سورة الفتح",
+    "surahNameMeaning": "The Victory",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Hujuraat",
+    "surahNameAr": "الحجرات",
+    "surahNameArLong": "سورة الحجرات",
+    "surahNameMeaning": "The Inner Apartments",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Qaaf",
+    "surahNameAr": "ق",
+    "surahNameArLong": "سورة ق",
+    "surahNameMeaning": "The letter Qaaf",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Adh-Dhaariyat",
+    "surahNameAr": "الذاريات",
+    "surahNameArLong": "سورة الذاريات",
+    "surahNameMeaning": "The Winnowing Winds",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "At-Tur",
+    "surahNameAr": "الطور",
+    "surahNameArLong": "سورة الطور",
+    "surahNameMeaning": "The Mount",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "An-Najm",
+    "surahNameAr": "النجم",
+    "surahNameArLong": "سورة النجم",
+    "surahNameMeaning": "The Star",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Qamar",
+    "surahNameAr": "القمر",
+    "surahNameArLong": "سورة القمر",
+    "surahNameMeaning": "The Moon",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Ar-Rahmaan",
+    "surahNameAr": "الرحمن",
+    "surahNameArLong": "سورة الرحمن",
+    "surahNameMeaning": "The Beneficent",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Waaqia",
+    "surahNameAr": "الواقعة",
+    "surahNameArLong": "سورة الواقعة",
+    "surahNameMeaning": "The Inevitable",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Hadid",
+    "surahNameAr": "الحديد",
+    "surahNameArLong": "سورة الحديد",
+    "surahNameMeaning": "The Iron",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Mujaadila",
+    "surahNameAr": "المجادلة",
+    "surahNameArLong": "سورة المجادلة",
+    "surahNameMeaning": "The Pleading Woman",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Hashr",
+    "surahNameAr": "الحشر",
+    "surahNameArLong": "سورة الحشر",
+    "surahNameMeaning": "The Exile",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Mumtahana",
+    "surahNameAr": "الممتحنة",
+    "surahNameArLong": "سورة الممتحنة",
+    "surahNameMeaning": "She that is to be examined",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "As-Saff",
+    "surahNameAr": "الصف",
+    "surahNameArLong": "سورة الصف",
+    "surahNameMeaning": "The Ranks",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Jumu'a",
+    "surahNameAr": "الجمعة",
+    "surahNameArLong": "سورة الجمعة",
+    "surahNameMeaning": "Friday",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Munaafiqoon",
+    "surahNameAr": "المنافقون",
+    "surahNameArLong": "سورة المنافقون",
+    "surahNameMeaning": "The Hypocrites",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "At-Taghaabun",
+    "surahNameAr": "التغابن",
+    "surahNameArLong": "سورة التغابن",
+    "surahNameMeaning": "Mutual Disillusion",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "At-Talaaq",
+    "surahNameAr": "الطلاق",
+    "surahNameArLong": "سورة الطلاق",
+    "surahNameMeaning": "Divorce",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "At-Tahrim",
+    "surahNameAr": "التحريم",
+    "surahNameArLong": "سورة التحريم",
+    "surahNameMeaning": "The Prohibition",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Mulk",
+    "surahNameAr": "الملك",
+    "surahNameArLong": "سورة الملك",
+    "surahNameMeaning": "The Sovereignty",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Qalam",
+    "surahNameAr": "القلم",
+    "surahNameArLong": "سورة القلم",
+    "surahNameMeaning": "The Pen",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Haaqqa",
+    "surahNameAr": "الحاقة",
+    "surahNameArLong": "سورة الحاقة",
+    "surahNameMeaning": "The Reality",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Ma'aarij",
+    "surahNameAr": "المعارج",
+    "surahNameArLong": "سورة المعارج",
+    "surahNameMeaning": "The Ascending Stairways",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Nooh",
+    "surahNameAr": "نوح",
+    "surahNameArLong": "سورة نوح",
+    "surahNameMeaning": "Noah",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Jinn",
+    "surahNameAr": "الجن",
+    "surahNameArLong": "سورة الجن",
+    "surahNameMeaning": "The Jinn",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Muzzammil",
+    "surahNameAr": "المزمل",
+    "surahNameArLong": "سورة المزمل",
+    "surahNameMeaning": "The Enshrouded One",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Muddaththir",
+    "surahNameAr": "المدثر",
+    "surahNameArLong": "سورة المدثر",
+    "surahNameMeaning": "The Cloaked One",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Qiyaama",
+    "surahNameAr": "القيامة",
+    "surahNameArLong": "سورة القيامة",
+    "surahNameMeaning": "The Resurrection",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Insaan",
+    "surahNameAr": "الانسان",
+    "surahNameArLong": "سورة الانسان",
+    "surahNameMeaning": "Man",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Mursalaat",
+    "surahNameAr": "المرسلات",
+    "surahNameArLong": "سورة المرسلات",
+    "surahNameMeaning": "The Emissaries",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "An-Naba",
+    "surahNameAr": "النبإ",
+    "surahNameArLong": "سورة النبأ",
+    "surahNameMeaning": "The Announcement",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "An-Naazi'aat",
+    "surahNameAr": "النازعات",
+    "surahNameArLong": "سورة النازعات",
+    "surahNameMeaning": "Those who drag forth",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Abasa",
+    "surahNameAr": "عبس",
+    "surahNameArLong": "سورة عبس",
+    "surahNameMeaning": "He frowned",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "At-Takwir",
+    "surahNameAr": "التكوير",
+    "surahNameArLong": "سورة التكوير",
+    "surahNameMeaning": "The Overthrowing",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Infitaar",
+    "surahNameAr": "الإنفطار",
+    "surahNameArLong": "سورة الإنفطار",
+    "surahNameMeaning": "The Cleaving",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Mutaffifin",
+    "surahNameAr": "المطففين",
+    "surahNameArLong": "سورة المطففين",
+    "surahNameMeaning": "Defrauding",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Inshiqaaq",
+    "surahNameAr": "الإنشقاق",
+    "surahNameArLong": "سورة الإنشقاق",
+    "surahNameMeaning": "The Splitting Open",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Burooj",
+    "surahNameAr": "البروج",
+    "surahNameArLong": "سورة البروج",
+    "surahNameMeaning": "The Constellations",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "At-Taariq",
+    "surahNameAr": "الطارق",
+    "surahNameArLong": "سورة الطارق",
+    "surahNameMeaning": "The Morning Star",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-A'laa",
+    "surahNameAr": "الأعلى",
+    "surahNameArLong": "سورة الأعلى",
+    "surahNameMeaning": "The Most High",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Ghaashiya",
+    "surahNameAr": "الغاشية",
+    "surahNameArLong": "سورة الغاشية",
+    "surahNameMeaning": "The Overwhelming",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Fajr",
+    "surahNameAr": "الفجر",
+    "surahNameArLong": "سورة الفجر",
+    "surahNameMeaning": "The Dawn",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Balad",
+    "surahNameAr": "البلد",
+    "surahNameArLong": "سورة البلد",
+    "surahNameMeaning": "The City",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Ash-Shams",
+    "surahNameAr": "الشمس",
+    "surahNameArLong": "سورة الشمس",
+    "surahNameMeaning": "The Sun",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Lail",
+    "surahNameAr": "الليل",
+    "surahNameArLong": "سورة الليل",
+    "surahNameMeaning": "The Night",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Ad-Dhuhaa",
+    "surahNameAr": "الضحى",
+    "surahNameArLong": "سورة الضحى",
+    "surahNameMeaning": "The Morning Hours",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Ash-Sharh",
+    "surahNameAr": "الشرح",
+    "surahNameArLong": "سورة الشرح",
+    "surahNameMeaning": "The Consolation",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "At-Tin",
+    "surahNameAr": "التين",
+    "surahNameArLong": "سورة التين",
+    "surahNameMeaning": "The Fig",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Alaq",
+    "surahNameAr": "العلق",
+    "surahNameArLong": "سورة العلق",
+    "surahNameMeaning": "The Clot",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Qadr",
+    "surahNameAr": "القدر",
+    "surahNameArLong": "سورة القدر",
+    "surahNameMeaning": "The Power, Fate",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Bayyina",
+    "surahNameAr": "البينة",
+    "surahNameArLong": "سورة البينة",
+    "surahNameMeaning": "The Evidence",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Az-Zalzala",
+    "surahNameAr": "الزلزلة",
+    "surahNameArLong": "سورة الزلزلة",
+    "surahNameMeaning": "The Earthquake",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Aadiyaat",
+    "surahNameAr": "العاديات",
+    "surahNameArLong": "سورة العاديات",
+    "surahNameMeaning": "The Chargers",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Qaari'a",
+    "surahNameAr": "القارعة",
+    "surahNameArLong": "سورة القارعة",
+    "surahNameMeaning": "The Calamity",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "At-Takaathur",
+    "surahNameAr": "التكاثر",
+    "surahNameArLong": "سورة التكاثر",
+    "surahNameMeaning": "Competition",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Asr",
+    "surahNameAr": "العصر",
+    "surahNameArLong": "سورة العصر",
+    "surahNameMeaning": "The Declining Day, Epoch",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Humaza",
+    "surahNameAr": "الهمزة",
+    "surahNameArLong": "سورة الهمزة",
+    "surahNameMeaning": "The Traducer",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Fil",
+    "surahNameAr": "الفيل",
+    "surahNameArLong": "سورة الفيل",
+    "surahNameMeaning": "The Elephant",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Quraish",
+    "surahNameAr": "قريش",
+    "surahNameArLong": "سورة قريش",
+    "surahNameMeaning": "Quraysh",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Maa'un",
+    "surahNameAr": "الماعون",
+    "surahNameArLong": "سورة الماعون",
+    "surahNameMeaning": "Almsgiving",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Kawthar",
+    "surahNameAr": "الكوثر",
+    "surahNameArLong": "سورة الكوثر",
+    "surahNameMeaning": "Abundance",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Kaafiroon",
+    "surahNameAr": "الكافرون",
+    "surahNameArLong": "سورة الكافرون",
+    "surahNameMeaning": "The Disbelievers",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "An-Nasr",
+    "surahNameAr": "النصر",
+    "surahNameArLong": "سورة النصر",
+    "surahNameMeaning": "Divine Support",
+    "revelationPlace": "Madina"
+  },
+  {
+    "surahName": "Al-Masad",
+    "surahNameAr": "المسد",
+    "surahNameArLong": "سورة المسد",
+    "surahNameMeaning": "The Palm Fibre",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Ikhlaas",
+    "surahNameAr": "الإخلاص",
+    "surahNameArLong": "سورة الإخلاص",
+    "surahNameMeaning": "Sincerity",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "Al-Falaq",
+    "surahNameAr": "الفلق",
+    "surahNameArLong": "سورة الفلق",
+    "surahNameMeaning": "The Dawn",
+    "revelationPlace": "Mecca"
+  },
+  {
+    "surahName": "An-Naas",
+    "surahNameAr": "الناس",
+    "surahNameArLong": "سورة الناس",
+    "surahNameMeaning": "Mankind",
+    "revelationPlace": "Mecca"
+  }
+]

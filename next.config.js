@@ -8,5 +8,4 @@ module.exports = withNextra({
   images: {
     unoptimized: true,
   },
-  basePath: process.env.LOCAL ? "" : "/docs",
 });

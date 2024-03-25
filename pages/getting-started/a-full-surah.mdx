@@ -3,17 +3,24 @@ title: How to get an Surah?
 description: How to get an surah/chapter from the Quran using the Quran API.
 ---
 
+import {Callout} from "nextra/components"
+
+
 ## Request Format
 
 Make a **GET** request to `/<surahNo>.json`
 
-Replace `<surahNo>` with the Surah Number.
+<Callout type="info">
+  Replace `<surahNo>` with the Surah Number
+</Callout>
 
-> **NOTE:** `surahNo` must be between `1` and `114`
+<Callout type="warning">
+  `surahNo` must be between `1` and `114`
+</Callout>
 
 ## Response
 
-A _JSON_ object containing the whole surah.
+A *_JSON_* object containing the whole surah.
 
 ### Example Response
 

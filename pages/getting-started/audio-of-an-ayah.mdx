@@ -1,0 +1,38 @@
+---
+title: How to get an Ayah?
+description: How to get an ayah/verse from the Quran using the Quran API.
+---
+
+import { Callout } from "nextra/components";
+
+## Request Format
+
+Root URL : [`quranaudio.pages.dev`](https://quranaudio.pages.dev) ( for audio )
+
+Make a **GET** request to `/<reciterNo>/<surahNo>_<ayahNo>.mp3`
+
+<Callout type="info">Replace `<reciterNo>` with the Reciter Number ( `1` or `2` )</Callout>
+
+<Callout type="info">Replace `<surahNo>` with the Surah Number and `<ayahNo>` with the Ayah Number</Callout>
+
+<Callout type="warning">
+  `surahNo` must be between `1` and `114` <br /> `ayahNo` must be between `1`
+  and the total number of Ayahs in the Surah
+</Callout>
+
+| Reciter ID | Name                    |
+| ---------- | :---------------------- |
+| 1          | Mishary Rashid Al-Afasy |
+| 2          | Abu Bakr Al-Shatri      |
+
+## Response
+
+A mp3 file will be returned.
+
+### Example
+
+Endpoint: [`/2/1_2.json`](https://quranaudio.pages.dev/2/1_2.mp3)
+
+<br />
+<audio src="https://quranaudio.pages.dev/2/1_2.mp3" controls />
+Raw Url: https://quranaudio.pages.dev/2/1_2.mp3

@@ -1,7 +1,7 @@
 {
-  "name": "contest-hive-docs",
+  "name": "quran-api-docs",
   "version": "0.0.1",
-  "description": "Documentation for Contest Hive",
+  "description": "Documentation for Quran API",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,23 +9,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Contest-Hive/docs.git"
+    "url": "git+https://github.com/Nusab19/Quran-API.git"
   },
-  "author": "Shu Ding <g@shud.in>",
+  "author": "Nusab Taha <nusabtaha33@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Contest-Hive/docs/issues"
+    "url": "https://github.com/Nusab19/Quran-API/issues"
   },
-  "homepage": "https://github.com/Contest-Hive/docs#readme",
+  "homepage": "https://github.com/Nusab19/Quran-API#readme",
   "dependencies": {
     "next": "^13.0.6",
     "nextra": "latest",
     "nextra-theme-docs": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "tailwind": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "18.11.10",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.1",
     "typescript": "^4.9.3"
   }
 }

@@ -1,15 +1,21 @@
 ---
 title: How to get an Ayah?
-description: How to get an ayah/verse from the Quran using the Quran API.
+description: How to get an ayah or verse from the Quran using the Quran API.
 ---
+
+import { Callout } from "nextra/components";
+
 
 ## Request Format
 
 Make a **GET** request to `/<surahNo>/<ayahNo>.json`
 
-Replace `<surahNo>` with the Surah Number and `<ayahNo>` with the Ayah Number.
+<Callout type="info">Replace `<reciterNo>` with the Reciter Number ( `1` or `2` )</Callout>
 
-> **NOTE:** `surahNo` must be between `1` and `114`. `ayahNo` must be between 1 and the total number of Ayahs in the Surah.
+<Callout type="info">Replace `<surahNo>` with the Surah Number and `<ayahNo>` with the Ayah Number</Callout>
+
+<Callout type="warning">`surahNo` must be between `1` and `114` <br/> `ayahNo` must be between `1` and the total number of Ayahs in the Surah</Callout>
+
 
 ## Response
 

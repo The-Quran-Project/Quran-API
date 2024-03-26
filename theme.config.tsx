@@ -41,7 +41,7 @@ const config: DocsThemeConfig = {
         <meta name="twitter:url" content="https://quranapi.pages.dev" />
         <meta
           name="og:title"
-          content={title ? title + ' – Quran API' : 'Quran API'}
+          content={title ? title : 'Quran API'}
         />
         <meta name="og:image" content={socialCard} />
         <meta name="apple-mobile-web-app-title" content="Quran API" />

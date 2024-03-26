@@ -12,4 +12,6 @@ The documentation for this API can be found [here](https://quranapi.pages.dev/do
 
 ## How it works
 
-This API serves static JSON files that contain the verses of the Quran. The data is taken from [Quran.com](https://quran.com). The `/api/` folder is generated at build time using a python script in `public/main.py`.
+This API serves static JSON files that contain the verses of the Quran. `/api/` folder is generated at build time.
+
+The data is taken from [Quran.com](https://quran.com).

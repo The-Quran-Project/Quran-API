@@ -1,7 +1,7 @@
 {
-  "name": "quran-api-docs",
-  "version": "0.0.1",
-  "description": "Documentation for Quran API",
+  "name": "quran-api",
+  "version": "1.0.0",
+  "description": "Quran API",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,8 +19,8 @@
   "homepage": "https://github.com/Nusab19/Quran-API#readme",
   "dependencies": {
     "next": "^13.5.6",
-    "nextra": "workspace:*",
-    "nextra-theme-docs": "workspace:*",
+    "nextra": "2.13.4",
+    "nextra-theme-docs": "2.13.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.32.6"

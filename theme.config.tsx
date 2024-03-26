@@ -20,8 +20,8 @@ const config: DocsThemeConfig = {
 
     const socialCard =
       route === '/' || !title
-        ? 'https://nextra.site/og.jpeg'
-        : `https://nextra.site/api/og?title=${title}`
+        ? 'https://quranapi.pages.dev/og.jpeg'
+        : `https://quranapi.pages.dev/api/og?title=${title}`
 
     return (
       <>
@@ -31,22 +31,22 @@ const config: DocsThemeConfig = {
         <meta httpEquiv="Content-Language" content="en" />
         <meta
           name="description"
-          content="Make beautiful websites with Next.js & MDX."
+          content="Get verses, chapters and audio recitations of the Quran using Quran API"
         />
         <meta
           name="og:description"
-          content="Make beautiful websites with Next.js & MDX."
+          content="Get verses, chapters and audio recitations of the Quran using Quran API"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={socialCard} />
-        <meta name="twitter:site:domain" content="nextra.site" />
-        <meta name="twitter:url" content="https://nextra.site" />
+        <meta name="twitter:site:domain" content="quranapi.pages.dev" />
+        <meta name="twitter:url" content="https://quranapi.pages.dev" />
         <meta
           name="og:title"
-          content={title ? title + ' – Nextra' : 'Nextra'}
+          content={title ? title + ' – Quran API' : 'Quran API'}
         />
         <meta name="og:image" content={socialCard} />
-        <meta name="apple-mobile-web-app-title" content="Nextra" />
+        <meta name="apple-mobile-web-app-title" content="Quran API" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link

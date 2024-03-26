@@ -1,6 +1,7 @@
 import { useRouter } from "next/router"
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs"
 
+
 const config: DocsThemeConfig = {
   logo: <b>Quran API</b>,
   project: {

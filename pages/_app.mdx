@@ -1,5 +1,14 @@
 import "../styles.css";
+import Script from 'next/script'
 
 export default function Nextra({Component, pageProps }) {
-    return <Component {...pageProps} />
+
+    return (
+        <>
+    <Script strategy="beforeInteractive" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "35a4723c84884a83ab19a903ce1502f5"}' defer />
+    <Component {...pageProps} />
+    </>
+
+)
+
 }

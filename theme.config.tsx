@@ -67,13 +67,6 @@ const config: DocsThemeConfig = {
   },
   toc: {
     backToTop: true
-  },
-  banner: {
-    dismissible: true,
-    text: function Banner() {
-      return (<a href="https://github.com/Nusab19/Quran-API" target="_blank">
-        ⚠ This API is still in development! →</a>)
-    }
   }
 }
 

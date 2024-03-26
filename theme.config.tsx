@@ -3,7 +3,10 @@ import { DocsThemeConfig, useConfig } from "nextra-theme-docs"
 
 
 const config: DocsThemeConfig = {
-    logo: <span className="flex"><img src="/logo.svg" width={30} height={30}/><b>Quran API</b></span>,
+  i18n: [
+    { locale: 'en-US', text: 'English' }],
+
+  logo: <span className="flex"><img src="/logo.svg" width={30} height={30} alt="Quran API Logo" /><b>Quran API</b></span>,
   project: {
     link: "https://github.com/Nusab19/Quran-API",
   },

@@ -23,14 +23,14 @@ body {
   text-align: center;
 }
 .header {
-  font-size: 7vw;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 .subHeader {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: rgb(75 85 99 / var(--tw-text-opacity));
   font-weight: 500;
-  font-size: 2vw;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 768px) {

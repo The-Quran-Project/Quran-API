@@ -4,3 +4,4 @@ node_modules
 public/api/
 out/
 .vscode/
+package-lock.json

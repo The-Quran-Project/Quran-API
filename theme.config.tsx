@@ -3,7 +3,7 @@ import { DocsThemeConfig, useConfig } from "nextra-theme-docs"
 
 
 const config: DocsThemeConfig = {
-  logo: <b>Quran API</b>,
+    logo: <span className="flex"><img src="/logo 3.svg" width={30} height={30}/><b>Quran API</b></span>,
   project: {
     link: "https://github.com/Nusab19/Quran-API",
   },
@@ -15,14 +15,11 @@ const config: DocsThemeConfig = {
   footer: {
     text: `© Quran API 2023 - ${new Date().getFullYear()}. All rights reserved`
   },
-  head: function useHead() { // TODO: Change the meta tag values
+  head: function useHead() {
     const { title } = useConfig()
     const { route } = useRouter()
 
-    const socialCard =
-      route === '/' || !title
-        ? 'https://quranapi.pages.dev/og.jpeg'
-        : `https://quranapi.pages.dev/api/og?title=${title}`
+    const socialCard = "/Thumb.svg"
 
     return (
       <>
@@ -49,17 +46,10 @@ const config: DocsThemeConfig = {
         <meta name="og:image" content={socialCard} />
         <meta name="apple-mobile-web-app-title" content="Quran API" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.png" type="image/png" />
         <link
           rel="icon"
           href="/favicon-dark.svg"
           type="image/svg+xml"
-          media="(prefers-color-scheme: dark)"
-        />
-        <link
-          rel="icon"
-          href="/favicon-dark.png"
-          type="image/png"
           media="(prefers-color-scheme: dark)"
         />
       </>
@@ -72,7 +62,7 @@ const config: DocsThemeConfig = {
       }
       return <>{title}</>
     },
-    defaultMenuCollapseLevel: 2,
+    defaultMenuCollapseLevel: 3,
     toggleButton: true
   },
   toc: {

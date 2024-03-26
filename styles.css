@@ -51,6 +51,13 @@ body {
   }
 }
 
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 115px;
+}
+
 .center {
   display: flex;
   align-items: center;

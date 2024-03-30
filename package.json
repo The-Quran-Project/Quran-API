@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nusab19/Quran-API.git"
+    "url": "git+https://github.com/The-Quran-Project/Quran-API.git"
   },
   "author": "Nusab Taha <nusabtaha33@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Nusab19/Quran-API/issues"
+    "url": "https://github.com/The-Quran-Project/Quran-API/issues"
   },
-  "homepage": "https://github.com/Nusab19/Quran-API#readme",
+  "homepage": "https://github.com/The-Quran-Project/Quran-API#readme",
   "dependencies": {
     "next": "^13.5.6",
     "nextra": "2.13.4",

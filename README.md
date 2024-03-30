@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Nusab19/Quran-API/assets/85403795/db6214cb-9c8b-4513-ba1e-429031a6a767"/>
+  <img src="https://github.com/The-Quran-Project/Quran-API/assets/85403795/db6214cb-9c8b-4513-ba1e-429031a6a767"/>
 </p>
 
 # Quran API

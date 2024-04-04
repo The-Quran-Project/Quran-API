@@ -8,21 +8,21 @@ def makeDir(folder_name):
 
 
 def makeJson(path, content):
-    with open(path, 'w', encoding="utf8") as f:
+    with open(path, "w", encoding="utf8") as f:
         json.dump(content, f, ensure_ascii=0, indent=4)
 
 
-with open("Data/surah.json", 'r', encoding="utf8") as f:
+with open("Data/surah.json", "r", encoding="utf8") as f:
     surahNames = json.load(f)
 
-with open("Data/surahData.json", 'r', encoding="utf8") as f:
+with open("Data/surahData.json", "r", encoding="utf8") as f:
     surahData = json.load(f)
 
 
-with open("Data/quran_ar.json", 'r', encoding="utf8") as f:
+with open("Data/quran_ar.json", "r", encoding="utf8") as f:
     quranAr = json.load(f)
 
-with open("Data/quran_en.json", 'r', encoding="utf8") as f:
+with open("Data/quran_en.json", "r", encoding="utf8") as f:
     quranEn = json.load(f)
 
 
@@ -48,7 +48,7 @@ for surahNo, j in quranEn.items():
     makeDir(f"api/{surahNo}")
 
     for ayahNo, english in enumerate(j, start=1):
-        
+
         arabic1, arabic2 = ara[ayahNo - 1]
         ayahData = {
             "surahName": surahName,
@@ -65,18 +65,18 @@ for surahNo, j in quranEn.items():
             "audio": {
                 "1": {
                     "reciter": "Mishary Rashid Al-Afasy",
-                    "url": audioUrl.format(num=1, surahNo=surahNo, ayahNo=ayahNo)
+                    "url": audioUrl.format(num=1, surahNo=surahNo, ayahNo=ayahNo),
                 },
                 "2": {
                     "reciter": "Abu Bakr Al-Shatri",
-                    "url": audioUrl.format(num=2, surahNo=surahNo, ayahNo=ayahNo)
-                }
-            }
+                    "url": audioUrl.format(num=2, surahNo=surahNo, ayahNo=ayahNo),
+                },
+            },
         }
         makeJson(f"api/{surahNo}/{ayahNo}.json", ayahData)
 
-        print(f"Done {ayahNo} of {surahNo}\r", end='')
-    
+        print(f"Done {ayahNo} of {surahNo}\r", end="")
+
     finalData = {
         "surahName": surahName,
         "surahNameArabic": surahNameAr,
@@ -85,19 +85,26 @@ for surahNo, j in quranEn.items():
         "revelationPlace": revelationPlace,
         "totalAyah": totalAyah,
         "surahNo": surahNo,
-        "english":j,
+        "english": j,
         "arabic1": [i[0] for i in ara],
-        "arabic2": [i[1] for i in ara]
+        "arabic2": [i[1] for i in ara],
     }
     makeJson(f"api/{surahNo}.json", finalData)
-    allSurahData.append({
-        "surahName": surahName,
-        "surahNameArabic": surahNameAr,
-        "surahNameArabicLong": surahNameArLong,
-        "surahNameTranslation": surahNameTranslation,
-        "revelationPlace": revelationPlace,
-        "totalAyah": totalAyah,
-    })
+    allSurahData.append(
+        {
+            "surahName": surahName,
+            "surahNameArabic": surahNameAr,
+            "surahNameArabicLong": surahNameArLong,
+            "surahNameTranslation": surahNameTranslation,
+            "revelationPlace": revelationPlace,
+            "totalAyah": totalAyah,
+        }
+    )
     print()
 
 makeJson("api/surah.json", allSurahData)
+
+reciters = {"1": "Mishary Rashid Al-Afasy", "2": "Abu Bakr Al-Shatri"}
+
+makeJson("api/reciters.json", reciters)
+print("Done")

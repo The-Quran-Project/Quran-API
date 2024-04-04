@@ -5,3 +5,6 @@ public/api/
 out/
 .vscode/
 package-lock.json
+test*
+input*
+output*

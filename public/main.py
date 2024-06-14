@@ -104,6 +104,7 @@ for surahNo, j in quranEn.items():
 
 makeJson("api/surah.json", allSurahData)
 
+# TODO: Add other reciters
 reciters = {"1": "Mishary Rashid Al-Afasy", "2": "Abu Bakr Al-Shatri"}
 
 makeJson("api/reciters.json", reciters)

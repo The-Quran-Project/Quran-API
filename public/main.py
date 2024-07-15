@@ -8,8 +8,8 @@ def makeDir(folder_name):
 
 
 def makeJson(path, content):
-    with open(path, "w", encoding="utf8") as f:
-        json.dump(content, f, ensure_ascii=0, indent=4)
+    with open(path, "w", encoding="utf8") as file:
+        json.dump(content, file, ensure_ascii=0, indent=4)
 
 
 with open("Data/surah.json", "r", encoding="utf8") as f:
@@ -24,6 +24,10 @@ with open("Data/quran_ar.json", "r", encoding="utf8") as f:
 
 with open("Data/quran_en.json", "r", encoding="utf8") as f:
     quranEn = json.load(f)
+
+with open("Data/quran_bn.json", "r", encoding="utf8") as f:
+    quranBn = json.load(f)
+
 
 
 makeDir("api")
@@ -45,11 +49,15 @@ for surahNo, j in quranEn.items():
     revelationPlace = surahInfo["revelationPlace"]
 
     ara = quranAr[str(surahNo)]
+    ben = quranBn[surahNo - 1]
+    
+    # Make the folder
     makeDir(f"api/{surahNo}")
 
     for ayahNo, english in enumerate(j, start=1):
-
         arabic1, arabic2 = ara[ayahNo - 1]
+        bangla = ben[ayahNo - 1]
+        
         ayahData = {
             "surahName": surahName,
             "surahNameArabic": surahNameAr,
@@ -62,6 +70,7 @@ for surahNo, j in quranEn.items():
             "english": english,
             "arabic1": arabic1,
             "arabic2": arabic2,
+            "bangla": bangla,
             "audio": {
                 "1": {
                     "reciter": "Mishary Rashid Al-Afasy",

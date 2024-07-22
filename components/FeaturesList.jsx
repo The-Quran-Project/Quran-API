@@ -7,9 +7,7 @@ const FeaturesList = () => {
       <li>Get JSON of a whole surah</li>
       <li>
         Get{" "}
-        <code className="text-xs md:text-sm bg-gray-800 px-1 py-0.5 rounded-md border border-gray-700 bg-opacity-60">
-          mp3
-        </code>{" "}
+        <span className="font-mono text-xs md:text-sm font-semibold">mp3</span>{" "}
         files of each verse
       </li>
     </ul>

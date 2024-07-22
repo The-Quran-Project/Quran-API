@@ -1,11 +1,10 @@
 {
+  "introduction": "Introduction",
+  "getting-started": "Getting Started",
+  "resources": "Resources",
+  "about": "About",
   "index": {
-    "title": "Introduction",
     "type": "page",
     "display": "hidden"
-  },
-  "docs": {
-    "title": "Docs",
-    "type": "page"
   }
 }

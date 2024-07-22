@@ -9,18 +9,18 @@ body {
       transparent 0%,
       white 70%
     ),
-    fixed 0 0 / 20px 20px radial-gradient(rgb(209, 209, 209) 1px, transparent 0),
-    fixed 10px 10px / 20px 20px radial-gradient(rgb(209, 209, 209) 1px, transparent 0);
+    fixed 0 0 / 20px 20px radial-gradient(rgb(212, 212, 212) 1px, transparent 0),
+    fixed 10px 10px / 20px 20px radial-gradient(rgb(202, 202, 202) 1px, transparent 0);
 }
 
 .dark body {
   background: linear-gradient(
     to bottom,
     transparent 0%,
-    black 60%
+    #111111 60%
   ),
-    fixed 0 0 / 20px 20px radial-gradient(rgb(49, 49, 49) 1px, transparent 0),
-    fixed 10px 10px / 20px 20px radial-gradient(rgb(49, 49, 49) 1px, transparent 0);
+    fixed 0 0 / 20px 20px radial-gradient(rgb(47, 47, 47) 1px, transparent 0),
+    fixed 10px 10px / 20px 20px radial-gradient(rgb(43, 43, 43) 1px, transparent 0);
 }
 
 .logo{

@@ -36,30 +36,21 @@ const config: DocsThemeConfig = {
   },
   head: function useHead() {
     const { title } = useConfig();
-    const { route } = useRouter();
-
     const socialCard = "/Thumb.svg";
+    // TODO: Change the Social Card. Use the Github Card or make something good with proper information
 
     return (
       <>
-        <meta name="msapplication-TileColor" content="#000" />
-        <meta name="theme-color" content="#000" />
+        <title>{title ? title : "Quran API"}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Language" content="en" />
-        <meta
-          name="description"
-          content="Get verses, chapters and audio recitations of the Quran using Quran API"
-        />
-        <meta
-          name="og:description"
-          content="Get verses, chapters and audio recitations of the Quran using Quran API"
-        />
+        <meta name="og:image" content={socialCard} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={socialCard} />
         <meta name="twitter:site:domain" content="quranapi.pages.dev" />
         <meta name="twitter:url" content="https://quranapi.pages.dev" />
-        <meta name="og:title" content={title ? title : "Quran API"} />
-        <meta name="og:image" content={socialCard} />
+        <meta name="msapplication-TileColor" content="#000" />
+        <meta name="theme-color" content="#000" />
         <meta name="apple-mobile-web-app-title" content="Quran API" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link
@@ -82,7 +73,7 @@ const config: DocsThemeConfig = {
       }
       return <>{title}</>;
     },
-    defaultMenuCollapseLevel: 3,
+    defaultMenuCollapseLevel: 2,
     toggleButton: true,
   },
   toc: {

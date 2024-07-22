@@ -8,7 +8,7 @@ const Hero = () => {
         API for the Quran with no rate limit. No authentication required
       </span>
       <span className="center">
-        <a className="styled-button" href="/docs">
+        <a className="styled-button" href="/introduction">
           Docs →
         </a>
       </span>

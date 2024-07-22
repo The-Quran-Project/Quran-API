@@ -14,7 +14,7 @@ const config: DocsThemeConfig = {
     link: "https://github.com/The-Quran-Project/Quran-API",
   },
   chat: {
-    link: "https://t.me/AlFurqanRobot",
+    link: "https://t.me/AlQuranDiscussion",
     icon: (
       <svg
         viewBox="0 0 24 24"

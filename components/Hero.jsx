@@ -1,24 +1,21 @@
 const Hero = () => {
   return (
-    <main className="container">
-    <br />
-    <br />
-      <header className="header">Quran for Everyone</header>
-      <span className="subHeader">
+    <main className="pb-10 text-center">
+      <header className="md:text-6xl lg:text-7xl font-bold mt-10 mb-5 text-4xl scale-110">
+        Quran for Everyone
+      </header>
+      <span className="font-semibold font-mono mb-12 block text-sm md:text-base lg:text-lg scale-95 md:scale-100 opacity-70">
         API for the Quran with no rate limit. No authentication required
       </span>
-      <br />
-      <br />
-      <br />
-      <span className="magicpattern"></span>
-
       <span className="center">
-        <a className="button-86" href="/docs">
+        <a className="styled-button" href="/docs">
           Docs →
         </a>
       </span>
     </main>
   );
 };
+
+// change theme to `class` instead of system preferences
 
 export default Hero;

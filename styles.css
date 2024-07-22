@@ -6,56 +6,33 @@
 body {
   background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 1) 300px
+      transparent 0%,
+      white 70%
     ),
-    fixed 0 0 / 20px 20px radial-gradient(#d1d1d1 1px, transparent 0),
-    fixed 10px 10px / 20px 20px radial-gradient(#d1d1d1 1px, transparent 0);
+    fixed 0 0 / 20px 20px radial-gradient(rgb(209, 209, 209) 1px, transparent 0),
+    fixed 10px 10px / 20px 20px radial-gradient(rgb(209, 209, 209) 1px, transparent 0);
 }
 
 .dark body {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #111 300px),
-    fixed 0 0 / 20px 20px radial-gradient(#313131 1px, transparent 0),
-    fixed 10px 10px / 20px 20px radial-gradient(#313131 1px, transparent 0);
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 60%
+  ),
+    fixed 0 0 / 20px 20px radial-gradient(rgb(49, 49, 49) 1px, transparent 0),
+    fixed 10px 10px / 20px 20px radial-gradient(rgb(49, 49, 49) 1px, transparent 0);
 }
 
-.container {
-  text-align: center;
-}
-.header {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-.subHeader {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-  font-weight: 500;
-  font-size: 1.2rem;
-}
-
-@media (min-width: 768px) {
-  .header {
-    font-size: 3rem;
-  }
-  .subHeader {
-    font-size: 0.8rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .header {
-    font-size: 5rem;
-  }
-  .subHeader {
-    font-size: 1.2rem;
-  }
-}
-
-.flex{
+.logo{
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 115px;
+}
+
+.logo > span{
+  font-weight: 600;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .center {
@@ -64,7 +41,7 @@ body {
   justify-content: center;
 }
 
-.button-86 {
+.styled-button {
   all: unset;
   width: 100px;
   height: 30px;
@@ -85,8 +62,8 @@ body {
   touch-action: manipulation;
 }
 
-.button-86::after,
-.button-86::before {
+.styled-button::after,
+.styled-button::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -95,7 +72,7 @@ body {
   transition: all 0.4s;
 }
 
-.button-86::before {
+.styled-button::before {
   transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
@@ -103,7 +80,7 @@ body {
   border-radius: 10px;
 }
 
-.button-86::after {
+.styled-button::after {
   transform: translate(10px, 10px);
   width: 35px;
   height: 35px;
@@ -113,20 +90,20 @@ body {
   border-radius: 50px;
 }
 
-.button-86:hover::before {
+.styled-button:hover::before {
   transform: translate(5%, 20%);
   width: 110%;
   height: 110%;
 }
 
-.button-86:hover::after {
+.styled-button:hover::after {
   border-radius: 10px;
   transform: translate(0, 0);
   width: 100%;
   height: 100%;
 }
 
-.button-86:active::after {
+.styled-button:active::after {
   transition: 0s;
   transform: translate(0, 5%);
 }

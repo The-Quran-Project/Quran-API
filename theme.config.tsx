@@ -5,9 +5,9 @@ const config: DocsThemeConfig = {
   i18n: [{ locale: "en-US", text: "English" }],
 
   logo: (
-    <span className="flex">
+    <span className="logo">
       <img src="/logo.svg" width={30} height={30} alt="Quran API Logo" />
-      <b>Quran API</b>
+      <span>Quran API</span>
     </span>
   ),
   project: {

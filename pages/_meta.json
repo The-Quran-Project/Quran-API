@@ -6,5 +6,9 @@
   "index": {
     "type": "page",
     "display": "hidden"
+  },
+  "docs":{
+    "type": "category",
+    "display": "hidden"
   }
 }

@@ -10,6 +10,21 @@ This is a simple API that provides the verses of the Quran. Unlike other APIs, t
 
 The documentation for this API can be found [here](https://quranapi.pages.dev/docs).
 
+## Host it yourself
+### Node.js
+```bash
+git clone https://github.com/The-Quran-Project/Quran-API/
+cd Quran-API
+npm i
+npm run build
+npm run start
+```
+
+### Docker
+
+Will be added very soon
+
+
 ## How it works
 
 This API serves static JSON files that contain the verses of the Quran. `/api/` folder is generated at build time.

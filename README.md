@@ -17,7 +17,7 @@ git clone https://github.com/The-Quran-Project/Quran-API/
 cd Quran-API
 npm i
 npm run build
-npm run start
+npx serve@latest out -y
 ```
 
 ### Docker

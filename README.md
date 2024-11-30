@@ -17,7 +17,7 @@ The documentation for this API can be found [here](https://quranapi.pages.dev/do
 ```bash
 git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1
 cd Quran-API
-npm i
+npm i --loglevel=error
 npm run build
 npx -y serve@latest out
 ```
@@ -25,7 +25,7 @@ npx -y serve@latest out
 > One line command
 
 ```bash
-git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1 && cd Quran-API && npm i && npm run build && npx -y serve@latest out
+git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1 && cd Quran-API && npm i --loglevel=error && npm run build && npx -y serve@latest out
 ```
 
 ### Docker

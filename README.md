@@ -19,13 +19,14 @@ git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1
 cd Quran-API
 npm i --loglevel=error
 npm run build
+python public/main.py
 npx -y serve@latest out
 ```
 
-> One line command
+One line command:
 
 ```bash
-git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1 && cd Quran-API && npm i --loglevel=error && npm run build && npx -y serve@latest out
+git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1 && cd Quran-API && npm i --loglevel=error && npm run build && python public/main.py && npx -y serve@latest out
 ```
 
 ### Docker

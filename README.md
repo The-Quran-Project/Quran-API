@@ -12,23 +12,6 @@ The documentation for this API can be found [here](https://quranapi.pages.dev/do
 
 ## Host it yourself
 
-### Node.js
-
-```bash
-git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1
-cd Quran-API
-npm i --loglevel=error
-npm run build
-python public/main.py
-npx -y serve@latest out
-```
-
-One line command:
-
-```bash
-git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1 && cd Quran-API && npm i --loglevel=error && npm run build && python public/main.py && npx -y serve@latest out
-```
-
 ### Docker
 
 ```bash
@@ -40,6 +23,23 @@ docker run -p 3000:3000 quran-api
 
 ```bash
 docker build -t quran-api . && docker run -p 3000:3000 quran-api
+```
+
+### Node.js
+
+```bash
+git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1
+cd Quran-API
+npm i --loglevel=error
+python public/main.py
+npm run build
+npx -y serve@latest out
+```
+
+One line command:
+
+```bash
+git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1 && cd Quran-API && npm i --loglevel=error &&  python public/main.py && npm run build && npx -y serve@latest out
 ```
 
 ## How it works

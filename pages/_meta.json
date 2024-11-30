@@ -8,7 +8,7 @@
     "display": "hidden"
   },
   "docs":{
-    "type": "category",
+    "type": "doc",
     "display": "hidden"
   }
 }

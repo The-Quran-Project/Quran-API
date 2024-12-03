@@ -2,6 +2,13 @@ import os
 import json
 
 
+# TODO: Add other reciters
+reciters = {
+    "1": "Mishary Rashid Al-Afasy",
+    "2": "Abu Bakr Al-Shatri",
+    "3": "Nasser Al Qatami",
+}
+
 def makeDir(folder_name):
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
@@ -83,8 +90,14 @@ for surahNo, j in quranEn.items():
                     "reciter": "Abu Bakr Al-Shatri",
                     "url": audioUrl.format(num=2, surahNo=surahNo, ayahNo=ayahNo),
                 },
+                "3":{
+                   "reciter": reciters["3"],
+                "url":audioUrl.format(num=3, surahNo=surahNo, ayahNo=ayahNo)
+               
+               }
             },
         }
+        
         makeJson(f"api/{surahNo}/{ayahNo}.json", ayahData)
 
         print(f"Done {ayahNo} of {surahNo}\r", end="")
@@ -116,14 +129,7 @@ for surahNo, j in quranEn.items():
 
 makeJson("api/surah.json", allSurahData)
 
-# TODO: Add other reciters
-reciters = {
-    "1": "Mishary Rashid Al-Afasy",
-    "2": "Abu Bakr Al-Shatri",
-    "3": "Nasser Al Qatami",
-}
+
 
 makeJson("api/reciters.json", reciters)
 print("Done")
-
-os.chdir("..")

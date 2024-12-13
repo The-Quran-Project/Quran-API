@@ -5,25 +5,66 @@ description: Get the audio recitation of a verse from the Quran using Quran API
 
 import { Callout } from "nextra/components";
 
-## Request Format
-
-Root URL : [`quranaudio.pages.dev`](https://quranaudio.pages.dev) ( for audio )
-
-Make a **GET** request to `/<reciterNo>/<surahNo>_<ayahNo>.mp3`
+<Callout>The root url for audio is different!</Callout>
 
 | Reciter ID | Name                    |
 | ---------- | :---------------------- |
 | 1          | Mishary Rashid Al-Afasy |
 | 2          | Abu Bakr Al-Shatri      |
-| 3          | Nasser Al Qatami        |      
-## Response
+| 3          | Nasser Al Qatami        |
 
-A mp3 file will be returned.
+# Audio of a Verse
+
+## Request format
+
+Make a **GET** request to `/<reciterNo>/<surahNo>_<ayahNo>.mp3`
 
 ### Example
 
-Endpoint: [`/2/1_2.mp3`](https://quranaudio.pages.dev/2/1_2.mp3)
+Endpoint: [`/2/1_2.mp3`](https://quranaudio.pages.dev/2/1_2.mp3)<br />Raw Url: https://quranaudio.pages.dev/2/1_2.mp3
+
+## Response
+
+A `mp3` file will be returned.
 
 <br />
 <audio src="https://quranaudio.pages.dev/2/1_2.mp3" controls />
-Raw Url: https://quranaudio.pages.dev/2/1_2.mp3
+
+<br />
+<br />
+
+# Audio of a Chapter
+
+As the audio recitation of a chapter is larger in size, I couldn't use _CloudFlare Pages_ for this. (As the maximum file size is **25MiB**)<br />Instead, the files are stored in **Github**. But there is also the original url from where the recitation was taken.
+
+It's best to use the original URL if possible. However, if you can't access it, you can use the `url` property instead.
+
+## Request format
+
+Make a **GET** request to `/audio/<surahNo>.json`
+
+### Example
+
+Endpoint: [`/audio/2.json`](/api/audio/2.json)<br />Raw Url: https://quranapi.pages.dev/api/audio/2.json
+
+## Response
+
+```json copy
+{
+  "1": {
+    "reciter": "Mishary Rashid Al-Afasy",
+    "url": "https://github.com/The-Quran-Project/Quran-Audio/raw/refs/heads/main/Data/1/2.mp3",
+    "originalUrl": "https://server8.mp3quran.net/download/afs/002.mp3"
+  },
+  "2": {
+    "reciter": "Abu Bakr Al-Shatri",
+    "url": "https://github.com/The-Quran-Project/Quran-Audio/raw/refs/heads/main/Data/2/2.mp3",
+    "originalUrl": "https://server11.mp3quran.net/download/shatri/002.mp3"
+  },
+  "3": {
+    "reciter": "Nasser Al Qatami",
+    "url": "https://github.com/The-Quran-Project/Quran-Audio/raw/refs/heads/main/Data/3/2.mp3",
+    "originalUrl": "https://server6.mp3quran.net/download/qtm/002.mp3"
+  }
+}
+```

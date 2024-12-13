@@ -4,7 +4,7 @@ import ApiPage from "./ApiPage";
 
 const NotFound = () => {
   const pathname = usePathname();
-  if (pathname == "/api") {
+  if (pathname == "/api" || pathname == "/api/") {
     return <ApiPage />;
   }
   return (
@@ -12,9 +12,8 @@ const NotFound = () => {
       <h1 className="text-4xl font-bold my-5">Path not found</h1>
       This page does not exist. Please check the URL or go back to the{" "}
       <a href="/" className="text-blue-500">
-        homepage
+        homepage.
       </a>
-      .
       <br />
       <br />
       <br />

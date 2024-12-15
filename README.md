@@ -47,3 +47,11 @@ git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1 && cd Quran-
 This API serves static JSON files that contain the verses of the Quran. `/api/` folder is generated at build time.
 
 The data is taken from [Quran.com](https://quran.com).
+
+# Repo Activity
+
+![Alt](https://repobeats.axiom.co/api/embed/2a8164a0702bf5f98f1a316cd96033a9f0b74471.svg "Repobeats analytics image")
+
+# Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=The-Quran-Project/Quran-API&type=Date)](https://star-history.com/#The-Quran-Project/Quran-API&Date)

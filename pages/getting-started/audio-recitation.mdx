@@ -13,17 +13,17 @@ import { Callout } from "nextra/components";
 | 2          | Abu Bakr Al-Shatri      |
 | 3          | Nasser Al Qatami        |
 
-# Audio of a Verse
+## Audio of a Verse
 
-## Request format
+### Request format
 
 Make a **GET** request to `/<reciterNo>/<surahNo>_<ayahNo>.mp3`
 
-### Example
+#### Example
 
 Endpoint: [`/2/1_2.mp3`](https://quranaudio.pages.dev/2/1_2.mp3)<br />Raw Url: https://quranaudio.pages.dev/2/1_2.mp3
 
-## Response
+### Response
 
 A `mp3` file will be returned.
 
@@ -33,21 +33,21 @@ A `mp3` file will be returned.
 <br />
 <br />
 
-# Audio of a Chapter
+## Audio of a Chapter
 
 As the audio recitation of a chapter is larger in size, I couldn't use _CloudFlare Pages_ for this. (As the maximum file size is **25MiB**)<br />Instead, the files are stored in **Github**. But there is also the original url from where the recitation was taken.
 
 It's best to use the original URL if possible. However, if you can't access it, you can use the `url` property instead.
 
-## Request format
+### Request format
 
 Make a **GET** request to `/audio/<surahNo>.json`
 
-### Example
+#### Example
 
 Endpoint: [`/audio/2.json`](/api/audio/2.json)<br />Raw Url: https://quranapi.pages.dev/api/audio/2.json
 
-## Response
+### Response
 
 ```json copy
 {

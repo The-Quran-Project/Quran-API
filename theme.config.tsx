@@ -3,7 +3,16 @@ import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   i18n: [{ locale: "en-US", text: "English" }],
-
+  banner: {
+    key: "chapter-audio",
+    dismissible: true,
+    text: (
+      <a href="/getting-started/audio-recitation#audio-of-a-chapter">
+        🎉 Audio recitation of a whole chapter is available now.{" "}
+        <span className="text-blue-500">See Here →</span>
+      </a>
+    ),
+  },
   logo: (
     <span className="logo">
       <img src="/logo.svg" width={30} height={30} alt="Quran API Logo" />

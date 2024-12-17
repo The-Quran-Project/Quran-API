@@ -139,3 +139,6 @@ for surahNo in range(1, 115):
     print()
 
 makeJson("api/surah.json", allSurahData)
+
+
+os.system("python generateSitemap.py")

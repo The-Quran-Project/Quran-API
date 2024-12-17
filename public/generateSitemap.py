@@ -1,6 +1,10 @@
 import os
 from datetime import datetime, timezone
 
+if os.path.exists("public"):
+    os.chdir("public")
+
+
 # Dictionary of paths
 paths = {
     "/": "index.mdx",

@@ -26,9 +26,9 @@ reciters = {
     "3": "Nasser Al Qatami",
 }
 originalUrl = {
-    "1": "https://server8.mp3quran.net/download/afs/{}.mp3",
-    "2": "https://server11.mp3quran.net/download/shatri/{}.mp3",
-    "3": "https://server6.mp3quran.net/download/qtm/{}.mp3",
+    "1": "https://server8.mp3quran.net/afs/{}.mp3",
+    "2": "https://server11.mp3quran.net/shatri/{}.mp3",
+    "3": "https://server6.mp3quran.net/qtm/{}.mp3",
 }
 
 makeDir("api")

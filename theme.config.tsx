@@ -2,17 +2,28 @@ import { useRouter } from "next/router";
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  i18n: [{ locale: "en-US", text: "English" }],
-  banner: {
-    key: "chapter-audio",
-    dismissible: true,
-    text: (
-      <a href="/getting-started/audio-recitation#audio-of-a-chapter">
-        🎉 Audio recitation of a whole chapter is available now.{" "}
-        <span className="text-blue-500">See Here →</span>
-      </a>
-    ),
+  i18n: [{ locale: "en", text: "English" }],
+  useNextSeoProps() {
+    const { asPath } = useRouter();
+    if (asPath !== "/") {
+      return {
+        titleTemplate: "%s", // Sets the title to just the page name, no suffix
+      };
+    }
+    return {
+      title: "Quran API - Quran For Everyone",
+    };
   },
+  // banner: {
+  //   key: "chapter-audio",
+  //   dismissible: true,
+  //   text: (
+  //     <a href="/getting-started/audio-recitation#audio-of-a-chapter">
+  //       🎉 Audio recitation of a whole chapter is available now.{" "}
+  //       <span className="text-blue-500">See Here →</span>
+  //     </a>
+  //   ),
+  // },
   logo: (
     <span className="logo">
       <img src="/logo.svg" width={30} height={30} alt="Quran API Logo" />
@@ -44,13 +55,10 @@ const config: DocsThemeConfig = {
     text: `© Quran API 2023 - ${new Date().getFullYear()}. All rights reserved`,
   },
   head: function useHead() {
-    const { title } = useConfig();
-    const socialCard = "/Thumb.svg";
-    // TODO: Change the Social Card. Use the Github Card or make something good with proper information
+    const socialCard = "/cover.jpg";
 
     return (
       <>
-        <title>{title ? title : "Quran API"}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Language" content="en" />
         <meta name="og:image" content={socialCard} />

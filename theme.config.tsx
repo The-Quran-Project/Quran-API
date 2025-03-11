@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
+import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   i18n: [{ locale: "en", text: "English" }],

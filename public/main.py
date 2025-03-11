@@ -23,12 +23,14 @@ if os.path.exists("public"):
 reciters = {
     "1": "Mishary Rashid Al-Afasy",
     "2": "Abu Bakr Al-Shatri",
-    "3": "Nasser Al Qatami",
+    "3": "Nasser Al-Qatami",
+    "4": "Yasser Al-Dosari",
 }
 originalUrl = {
     "1": "https://server8.mp3quran.net/afs/{}.mp3",
     "2": "https://server11.mp3quran.net/shatri/{}.mp3",
     "3": "https://server6.mp3quran.net/qtm/{}.mp3",
+    "4": "https://server11.mp3quran.net/yasser/{}.mp3",
 }
 
 makeDir("api")
@@ -58,7 +60,7 @@ for surahNo in range(1, 115):
     surahNameTranslation = surahInfo["surahNameMeaning"]
     revelationPlace = surahInfo["revelationPlace"]
     verseAudio = "https://quranaudio.pages.dev/{num}/{surahNo}_{ayahNo}.mp3"
-    chapterAudio = "https://github.com/The-Quran-Project/Quran-Audio/raw/refs/heads/main/Data/{}/{}.mp3"
+    chapterAudio = "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/{}/{}.mp3"
 
     # Make the folder
     makeDir(f"api/{surahNo}")

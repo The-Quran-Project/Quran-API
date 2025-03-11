@@ -22,14 +22,19 @@ Make a **GET** request to `/<reciterNo>/<surahNo>_<ayahNo>.mp3`
 
 #### Example
 
-Endpoint: [`/2/1_2.mp3`](https://quranaudio.pages.dev/2/1_2.mp3)<br />Raw Url: https://quranaudio.pages.dev/2/1_2.mp3
+Endpoint: [`/2/1_2.mp3`](https://the-quran-project.github.io/Quran-Audio/Data/2/1_2.mp3)<br />Raw Url: https://the-quran-project.github.io/Quran-Audio/Data/2/1_2.mp3
+
+<br />
+<br />
+> The previous url: `quranaudio.pages.dev/<reciterNo>/<surahNo>_<ayahNo>.mp3` is still available. But there are only **3** reciters in that. It is because of the 25k total file limit from cloudflare pages.
+
 
 ### Response
 
 A `mp3` file will be returned.
 
 <br />
-<audio src="https://quranaudio.pages.dev/2/1_2.mp3" controls />
+<audio src="https://the-quran-project.github.io/Quran-Audio/Data/2/1_2.mp3" controls />
 
 <br />
 <br />
@@ -52,9 +57,25 @@ Endpoint: [`/audio/2.json`](/api/audio/2.json)<br />Raw Url: https://quranapi.pa
 
 ```json copy
 {
-    "1": "Mishary Rashid Al-Afasy",
-    "2": "Abu Bakr Al-Shatri",
-    "3": "Nasser Al-Qatami",
-    "4": "Yasser Al-Dosari"
+    "1": {
+        "reciter": "Mishary Rashid Al-Afasy",
+        "url": "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/1/2.mp3",
+        "originalUrl": "https://server8.mp3quran.net/afs/002.mp3"
+    },
+    "2": {
+        "reciter": "Abu Bakr Al-Shatri",
+        "url": "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/2/2.mp3",
+        "originalUrl": "https://server11.mp3quran.net/shatri/002.mp3"
+    },
+    "3": {
+        "reciter": "Nasser Al-Qatami",
+        "url": "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/3/2.mp3",
+        "originalUrl": "https://server6.mp3quran.net/qtm/002.mp3"
+    },
+    "4": {
+        "reciter": "Yasser Al-Dosari",
+        "url": "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/4/2.mp3",
+        "originalUrl": "https://server11.mp3quran.net/yasser/002.mp3"
+    }
 }
 ```

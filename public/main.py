@@ -26,6 +26,13 @@ reciters = {
     "3": "Nasser Al-Qatami",
     "4": "Yasser Al-Dosari",
 }
+recitersWithID = {
+    "1": "Alafasy_128kbps",
+    "2": "Abu_Bakr_Ash-Shaatree_128kbps",
+    "3": "Nasser_Alqatami_128kbps",
+    "4": "Yasser_Ad-Dussary_128kbps",
+}
+
 originalUrl = {
     "1": "https://server8.mp3quran.net/afs/{}.mp3",
     "2": "https://server11.mp3quran.net/shatri/{}.mp3",
@@ -59,7 +66,10 @@ for surahNo in range(1, 115):
     surahNameArLong = surahInfo["surahNameArLong"]
     surahNameTranslation = surahInfo["surahNameMeaning"]
     revelationPlace = surahInfo["revelationPlace"]
-    verseAudio = "https://quranaudio.pages.dev/{num}/{surahNo}_{ayahNo}.mp3"
+    # verseAudio = "https://quranaudio.pages.dev/{num}/{surahNo}_{ayahNo}.mp3" # discontinued due to total file limit
+    # verseAudio = "https://github.com/The-Quran-Project/Quran-Audio/raw/refs/heads/data/Data/{num}/{surahNo}_{ayahNo}.mp3" # github raw
+    verseOriginalAudio = "https://everyayah.com/data/{name}/{surah}{ayah}.mp3"
+    verseAudio = "https://the-quran-project.github.io/Quran-Audio/Data/{num}/{surahNo}_{ayahNo}.mp3"
     chapterAudio = "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/{}/{}.mp3"
 
     # Make the folder
@@ -87,6 +97,11 @@ for surahNo in range(1, 115):
                 i: {
                     "reciter": j,
                     "url": verseAudio.format(num=i, surahNo=surahNo, ayahNo=ayahNo),
+                    "originalUrl": verseOriginalAudio.format(
+                        name=recitersWithID[i],
+                        surah=f"{surahNo:03}",
+                        ayah=f"{ayahNo:03}",
+                    ),
                 }
                 for (i, j) in reciters.items()
             },

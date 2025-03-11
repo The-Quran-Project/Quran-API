@@ -55,7 +55,7 @@ const config: DocsThemeConfig = {
     text: `© Quran API 2023 - ${new Date().getFullYear()}. All rights reserved`,
   },
   head: function useHead() {
-    const socialCard = "/cover.jpg";
+    const socialCard = "/cover.png";
 
     return (
       <>

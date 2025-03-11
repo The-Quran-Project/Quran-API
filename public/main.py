@@ -24,11 +24,13 @@ reciters = {
     "1": "Mishary Rashid Al-Afasy",
     "2": "Abu Bakr Al-Shatri",
     "3": "Nasser Al Qatami",
+    "4": "Yasser Al Dossari",
 }
 originalUrl = {
     "1": "https://server8.mp3quran.net/afs/{}.mp3",
     "2": "https://server11.mp3quran.net/shatri/{}.mp3",
     "3": "https://server6.mp3quran.net/qtm/{}.mp3",
+    "4": "https://server11.mp3quran.net/yasser/{}.mp3",
 }
 
 makeDir("api")

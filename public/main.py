@@ -26,6 +26,7 @@ reciters = {
     "3": "Nasser Al-Qatami",
     "4": "Yasser Al-Dosari",
     "5": "Hani Ar Rifai",
+    "6": "Mohammad Al Luhaidan",
 }
 recitersWithID = {
     "1": "Alafasy_128kbps",
@@ -33,6 +34,8 @@ recitersWithID = {
     "3": "Nasser_Alqatami_128kbps",
     "4": "Yasser_Ad-Dussary_128kbps",
     "5": "Hani_Rifai_192kbps",
+    "6": "Mohammad_Al_Luhaidan_(No_verse_by_verse)",
+
 
 }
 
@@ -42,6 +45,7 @@ originalUrl = {
     "3": "https://server6.mp3quran.net/qtm/{}.mp3",
     "4": "https://server11.mp3quran.net/yasser/{}.mp3",
     "5": "https://server8.mp3quran.net/hani/{}.mp3",
+    "6": "http://cdnserver8.mp3quran.net/lhdan/{}.mp3"
 }
 
 makeDir("api")

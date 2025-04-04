@@ -20,6 +20,7 @@ quranUr = readJsonFile("quran_ur.json")
 
 
 allSurahData = []
+translations = {"english": [], "arabic1": [], "arabic2": [], "bengali": [], "urdu": []}
 
 
 for surahNo in range(1, 115):
@@ -37,7 +38,7 @@ for surahNo in range(1, 115):
     revelationPlace = surahInfo["revelationPlace"]
     # verseAudio = "https://quranaudio.pages.dev/{num}/{surahNo}_{ayahNo}.mp3" # discontinued due to total file limit
     # verseAudio = "https://github.com/The-Quran-Project/Quran-Audio/raw/refs/heads/data/Data/{num}/{surahNo}_{ayahNo}.mp3" # github raw
-    
+
     verseOriginalAudio = "https://everyayah.com/data/{name}/{surah}{ayah}.mp3"
     verseAudio = "https://the-quran-project.github.io/Quran-Audio/Data/{num}/{surahNo}_{ayahNo}.mp3"
     chapterAudio = "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/{}/{}.mp3"
@@ -50,8 +51,15 @@ for surahNo in range(1, 115):
         english = eng[ayahNo - 1]
         bengali = ben[ayahNo - 1]
         urdu = urd[ayahNo - 1]
+        ayahTranslations = {
+            "english": english,
+            "arabic1": arabic1,
+            "arabic2": arabic2,
+            "bengali": bengali,
+            "urdu": urdu,
+        }
 
-        ayahData = {
+        defaultAyahData = {
             "surahName": surahName,
             "surahNameArabic": surahNameAr,
             "surahNameArabicLong": surahNameArLong,
@@ -60,11 +68,6 @@ for surahNo in range(1, 115):
             "totalAyah": totalAyah,
             "surahNo": surahNo,
             "ayahNo": ayahNo,
-            "english": english,
-            "arabic1": arabic1,
-            "arabic2": arabic2,
-            "bengali": bengali,
-            "urdu": urdu,
             "audio": {
                 i: {
                     "reciter": j,
@@ -79,11 +82,20 @@ for surahNo in range(1, 115):
             },
         }
 
+        ayahData = defaultAyahData | ayahTranslations
+
         makeJson(f"api/{surahNo}/{ayahNo}.json", ayahData)
 
         print(f"Done {ayahNo} of {surahNo}\r", end="")
 
-    finalData = {
+    chapterTranslations = {
+        "english": [i for i in eng],
+        "arabic1": [i[0] for i in ara],
+        "arabic2": [i[1] for i in ara],
+        "bengali": [i for i in ben],
+        "urdu": [i for i in urd],
+    }
+    defaultChapterData = {
         "surahName": surahName,
         "surahNameArabic": surahNameAr,
         "surahNameArabicLong": surahNameArLong,
@@ -99,11 +111,14 @@ for surahNo in range(1, 115):
             }
             for (i, j) in reciters.items()
         },
-        "english": [i for i in eng],
-        "arabic1": [i[0] for i in ara],
-        "arabic2": [i[1] for i in ara],
-        "bengali": [i for i in ben],
     }
+
+    finalData = defaultChapterData | chapterTranslations
+
+    # For specific translations
+    for lang, value in chapterTranslations.items():
+        _data = defaultChapterData | {lang: value}
+        translations[lang].append(_data)
 
     chapterAudioData = {
         i: {
@@ -113,8 +128,7 @@ for surahNo in range(1, 115):
         }
         for (i, j) in reciters.items()
     }
-    makeJson(f"api/{surahNo}.json", finalData)
-    makeJson(f"api/audio/{surahNo}.json", chapterAudioData)
+
     allSurahData.append(
         {
             "surahName": surahName,
@@ -125,9 +139,14 @@ for surahNo in range(1, 115):
             "totalAyah": totalAyah,
         }
     )
+    makeJson(f"api/{surahNo}.json", finalData)
+    makeJson(f"api/audio/{surahNo}.json", chapterAudioData)
     print()
 
+
 makeJson("api/surah.json", allSurahData)
+for lang, value in translations.items():
+    makeJson(f"api/{lang}.json", value)
 
 
 # Generate the sitemap

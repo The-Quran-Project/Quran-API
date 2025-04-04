@@ -1,0 +1,85 @@
+---
+title: Get the Full Quran Translation
+description: Get the full Quran translation in JSON format using Quran API
+---
+
+import { Callout } from "nextra/components";
+
+## Request Format
+
+Make a **GET** request to `/<translationName>.json`
+
+<Callout type="info">
+  Replace `<translationName>` with the Translation you want
+</Callout>
+
+Currently, the following translations are available:
+
+- `english` - English Translation
+- `arabic1` - Arabic Translation with Tashkeel (diacritics)
+- `arabic2` - Arabic Translation without Tashkeel (diacritics)
+- `bengali` - Bengali Translation
+- `urdu` - Urdu Translation
+
+You should use this if you're building an app and want to get the response once and store it in your database.
+You can also use this if you want to get the translation in a specific language.
+
+## Response
+
+A _*JSON*_ object containing the whole translation.
+
+<Callout>
+  The response will be very large. 10,500+ lines long and 1.5MB+ in size
+</Callout>
+
+### Example Response
+
+Endpoint: [`/api/english.json`](/api/english.json)
+
+```json copy
+[
+    {
+        "surahName": "Al-Faatiha",
+        "surahNameArabic": "الفاتحة",
+        "surahNameArabicLong": "سُورَةُ ٱلْفَاتِحَةِ",
+        "surahNameTranslation": "The Opening",
+        "revelationPlace": "Mecca",
+        "totalAyah": 7,
+        "surahNo": 1,
+        "audio": {
+            "1": {
+                "reciter": "Mishary Rashid Al Afasy",
+                "url": "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/1/1.mp3",
+                "originalUrl": "https://server8.mp3quran.net/afs/001.mp3"
+            },
+            "2": {
+                "reciter": "Abu Bakr Al Shatri",
+                "url": "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/2/1.mp3",
+                "originalUrl": "https://server11.mp3quran.net/shatri/001.mp3"
+            },
+            "3": {
+                "reciter": "Nasser Al Qatami",
+                "url": "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/3/1.mp3",
+                "originalUrl": "https://server6.mp3quran.net/qtm/001.mp3"
+            },
+            ...
+        },
+        "english": [
+            "In the Name of Allah—the Most Compassionate, Most Merciful.",
+            "All praise is for Allah—Lord of all worlds",
+            "the Most Compassionate, Most Merciful",
+            "Master of the Day of Judgment.",
+            "You ˹alone˺ we worship and You ˹alone˺ we ask for help.",
+            "Guide us along the Straight Path",
+            "the Path of those You have blessed—not those You are displeased with, or those who are astray."
+        ]
+    },
+    {
+        "surahName": "Al-Baqara",
+        "surahNameArabic": "البقرة",
+        "surahNameArabicLong": "سورة البقرة",
+        "surahNameTranslation": "The Cow",
+        ...
+    },
+    ...
+```

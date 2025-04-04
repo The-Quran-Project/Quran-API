@@ -1,9 +1,10 @@
 {
   "name": "quran-api",
-  "version": "1.2.1",
+  "version": "2.0.1",
   "description": "Quran API",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "python public/scripts/main.py ",
     "build": "next build",
     "start": "next start",
     "run": "next build && npx serve@latest out"

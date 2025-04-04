@@ -5,18 +5,15 @@ description: Get a verse from the Quran in json format using Quran API
 
 import { Callout } from "nextra/components";
 
-
 ## Request Format
 
 Make a **GET** request to `/<surahNo>/<ayahNo>.json`
 
-
 <Callout type="info">Replace `<surahNo>` with the Surah Number and `<ayahNo>` with the Ayah Number</Callout>
-
 
 ## Response
 
-A _JSON_ object containing informations about the Ayah.
+A _JSON_ object containing information about the Ayah.
 
 ### Example Response
 
@@ -24,39 +21,44 @@ Endpoint: [`/api/1/2.json`](/api/1/2.json)
 
 ```json copy
 {
-  "surahName": "Al-Faatiha",
-  "surahNameArabic": "الفاتحة",
-  "surahNameArabicLong": "سُورَةُ ٱلْفَاتِحَةِ",
-  "surahNameTranslation": "The Opening",
-  "revelationPlace": "Mecca",
-  "totalAyah": 7,
-  "surahNo": 1,
-  "ayahNo": 2,
-  "english": "All praise is for Allah—Lord of all worlds",
-  "arabic1": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
-  "arabic2": "الحمد لله رب العالمين",
-  "bengali": "সমস্ত প্রশংসা আল্লাহর জন্য, যিনি সৃষ্টিকুলের রব।",
-  "audio": {
-    "1": {
-      "reciter": "Mishary Rashid Al-Afasy",
-      "url": "https://the-quran-project.github.io/Quran-Audio/Data/1/1_2.mp3",
-      "originalUrl": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
-    },
-    "2": {
-      "reciter": "Abu Bakr Al-Shatri",
-      "url": "https://the-quran-project.github.io/Quran-Audio/Data/2/1_2.mp3",
-      "originalUrl": "https://everyayah.com/data/Abu_Bakr_Ash-Shaatree_128kbps/001002.mp3"
-    },
-    "3": {
-      "reciter": "Nasser Al-Qatami",
-      "url": "https://the-quran-project.github.io/Quran-Audio/Data/3/1_2.mp3",
-      "originalUrl": "https://everyayah.com/data/Nasser_Alqatami_128kbps/001002.mp3"
-    },
-    "4": {
-      "reciter": "Yasser Al-Dosari",
-      "url": "https://the-quran-project.github.io/Quran-Audio/Data/4/1_2.mp3",
-      "originalUrl": "https://everyayah.com/data/Yasser_Ad-Dussary_128kbps/001002.mp3"
-    }
-  }
+   "surahName": "Al-Faatiha",
+   "surahNameArabic": "الفاتحة",
+   "surahNameArabicLong": "سُورَةُ ٱلْفَاتِحَةِ",
+   "surahNameTranslation": "The Opening",
+   "revelationPlace": "Mecca",
+   "totalAyah": 7,
+   "surahNo": 1,
+   "ayahNo": 2,
+   "english": "All praise is for Allah—Lord of all worlds",
+   "arabic1": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ",
+   "arabic2": "الحمد لله رب العالمين",
+   "bengali": "সমস্ত প্রশংসা আল্লাহর জন্য, যিনি সৃষ্টিকুলের রব।",
+   "audio": {
+      "1": {
+         "reciter": "Mishary Rashid Al Afasy",
+         "url": "https://the-quran-project.github.io/Quran-Audio/Data/1/1_2.mp3",
+         "originalUrl": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
+      },
+      "2": {
+         "reciter": "Abu Bakr Al Shatri",
+         "url": "https://the-quran-project.github.io/Quran-Audio/Data/2/1_2.mp3",
+         "originalUrl": "https://everyayah.com/data/Abu_Bakr_Ash-Shaatree_128kbps/001002.mp3"
+      },
+      "3": {
+         "reciter": "Nasser Al Qatami",
+         "url": "https://the-quran-project.github.io/Quran-Audio/Data/3/1_2.mp3",
+         "originalUrl": "https://everyayah.com/data/Nasser_Alqatami_128kbps/001002.mp3"
+      },
+      "4": {
+         "reciter": "Yasser Al Dosari",
+         "url": "https://the-quran-project.github.io/Quran-Audio/Data/4/1_2.mp3",
+         "originalUrl": "https://everyayah.com/data/Yasser_Ad-Dussary_128kbps/001002.mp3"
+      },
+      "5": {
+         "reciter": "Hani Ar Rifai",
+         "url": "https://the-quran-project.github.io/Quran-Audio/Data/5/1_2.mp3",
+         "originalUrl": "https://everyayah.com/data/Hani_Rifai_192kbps/001002.mp3"
+      }
+   }
 }
 ```

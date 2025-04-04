@@ -1,0 +1,27 @@
+---
+title: Get a Chapter from the Quran.
+description: Get a chapter from the Quran in json format using Quran API
+---
+
+import { Callout } from "nextra/components"
+
+
+## Request Format
+
+Make a **GET** request to `/<surahNo>.json`
+
+<Callout type="info">
+  Replace `<surahNo>` with the Surah Number
+</Callout>
+
+## Response
+
+A *_JSON_* object containing the whole surah.
+
+### Example Response
+
+Endpoint: [`/api/112.json`](/api/112.json)
+
+```json copy
+CHAPTER_112_RESPONSE
+```

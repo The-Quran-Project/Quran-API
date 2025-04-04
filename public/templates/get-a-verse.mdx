@@ -1,0 +1,24 @@
+---
+title: Get a verse from the Quran
+description: Get a verse from the Quran in json format using Quran API
+---
+
+import { Callout } from "nextra/components";
+
+## Request Format
+
+Make a **GET** request to `/<surahNo>/<ayahNo>.json`
+
+<Callout type="info">Replace `<surahNo>` with the Surah Number and `<ayahNo>` with the Ayah Number</Callout>
+
+## Response
+
+A _JSON_ object containing information about the Ayah.
+
+### Example Response
+
+Endpoint: [`/api/1/2.json`](/api/1/2.json)
+
+```json copy
+VERSE_2_RESPONSE
+```

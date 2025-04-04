@@ -1,52 +1,13 @@
 import os
-import json
+
+from config import reciters, recitersWithID, originalUrl
+from helper import makeDir, makeJson, readJsonFile, goToRightDir
 
 
-def makeDir(folder_name):
-    if not os.path.exists(folder_name):
-        os.makedirs(folder_name)
+
+goToRightDir()
 
 
-def makeJson(path, content):
-    with open(path, "w", encoding="utf8") as file:
-        json.dump(content, file, ensure_ascii=0, indent=4)
-
-
-def readJsonFile(path: str):
-    with open(f"Data/{path}", "r", encoding="utf8") as file:
-        return json.load(file)
-
-
-if os.path.exists("public"):
-    os.chdir("public")
-
-reciters = {
-    "1": "Mishary Rashid Al-Afasy",
-    "2": "Abu Bakr Al-Shatri",
-    "3": "Nasser Al-Qatami",
-    "4": "Yasser Al-Dosari",
-    "5": "Hani Ar Rifai",
-    "6": "Mohammad Al Luhaidan",
-}
-recitersWithID = {
-    "1": "Alafasy_128kbps",
-    "2": "Abu_Bakr_Ash-Shaatree_128kbps",
-    "3": "Nasser_Alqatami_128kbps",
-    "4": "Yasser_Ad-Dussary_128kbps",
-    "5": "Hani_Rifai_192kbps",
-    "6": "Mohammad_Al_Luhaidan_(No_verse_by_verse)",
-
-
-}
-
-originalUrl = {
-    "1": "https://server8.mp3quran.net/afs/{}.mp3",
-    "2": "https://server11.mp3quran.net/shatri/{}.mp3",
-    "3": "https://server6.mp3quran.net/qtm/{}.mp3",
-    "4": "https://server11.mp3quran.net/yasser/{}.mp3",
-    "5": "https://server8.mp3quran.net/hani/{}.mp3",
-    "6": "http://cdnserver8.mp3quran.net/lhdan/{}.mp3"
-}
 
 makeDir("api")
 makeDir("api/audio")
@@ -166,4 +127,6 @@ for surahNo in range(1, 115):
 makeJson("api/surah.json", allSurahData)
 
 
-os.system("python generateSitemap.py")
+# Generate the sitemap
+os.system("python scripts/generateSitemap.py")
+os.system("python scripts/dumpTemplates.py")

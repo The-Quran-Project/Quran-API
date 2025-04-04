@@ -4,9 +4,7 @@ from config import reciters, recitersWithID, originalUrl
 from helper import makeDir, makeJson, readJsonFile, goToRightDir
 
 
-
 goToRightDir()
-
 
 
 makeDir("api")
@@ -18,6 +16,7 @@ surahData = readJsonFile("surahData.json")
 quranAr = readJsonFile("quran_ar.json")
 quranEn = readJsonFile("quran_en.json")
 quranBn = readJsonFile("quran_bn.json")
+quranUr = readJsonFile("quran_ur.json")
 
 
 allSurahData = []
@@ -27,6 +26,7 @@ for surahNo in range(1, 115):
     eng = quranEn[surahNo - 1]
     ara = quranAr[surahNo - 1]
     ben = quranBn[surahNo - 1]
+    urd = quranUr[surahNo - 1]
 
     totalAyah = len(eng)
     surahInfo = surahData[surahNo - 1]
@@ -45,9 +45,10 @@ for surahNo in range(1, 115):
     makeDir(f"api/{surahNo}")
 
     for ayahNo in range(1, totalAyah + 1):
-        english = eng[ayahNo - 1]
         arabic1, arabic2 = ara[ayahNo - 1]
+        english = eng[ayahNo - 1]
         bengali = ben[ayahNo - 1]
+        urdu = urd[ayahNo - 1]
 
         ayahData = {
             "surahName": surahName,
@@ -62,6 +63,7 @@ for surahNo in range(1, 115):
             "arabic1": arabic1,
             "arabic2": arabic2,
             "bengali": bengali,
+            "urdu": urdu,
             "audio": {
                 i: {
                     "reciter": j,

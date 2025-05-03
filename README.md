@@ -6,6 +6,23 @@
 
 This is a simple API that provides the verses of the Quran. Unlike other APIs, this API doesn't require any authentication. It's free and open for everyone without any rate limits.
 
+## Note
+
+We currently provide these translations directly with every verse request:
+
+- English
+- Arabic (with and without Tashkeel)
+- Bengali
+- Urdu
+
+We can technically provide more translations directly. But as not everyone will need all the languages, therefore we'll only stick with these major 4 translations.
+
+But, we provide other translations too. But for that, you need to get the whole translation of the quran at once. These are:
+
+- Trukish
+
+More information [here](https://quranapi.pages.dev/getting-started/get-full-quran-translation)
+
 ## Documentation
 
 The documentation for this API can be found [here](https://quranapi.pages.dev/docs).

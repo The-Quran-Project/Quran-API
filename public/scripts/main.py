@@ -17,10 +17,19 @@ quranAr = readJsonFile("quran_ar.json")
 quranEn = readJsonFile("quran_en.json")
 quranBn = readJsonFile("quran_bn.json")
 quranUr = readJsonFile("quran_ur.json")
+quranTr = readJsonFile("quran_tr.json")
 
+nonMajor = ["turkish"]  # save the whole json translation, but not the ayah by ayah
 
 allSurahData = []
-translations = {"english": [], "arabic1": [], "arabic2": [], "bengali": [], "urdu": []}
+translations = {
+    "english": [],
+    "arabic1": [],
+    "arabic2": [],
+    "bengali": [],
+    "urdu": [],
+    "turkish": [],
+}
 
 
 for surahNo in range(1, 115):
@@ -28,6 +37,7 @@ for surahNo in range(1, 115):
     ara = quranAr[surahNo - 1]
     ben = quranBn[surahNo - 1]
     urd = quranUr[surahNo - 1]
+    tur = quranTr[surahNo - 1]
 
     totalAyah = len(eng)
     surahInfo = surahData[surahNo - 1]
@@ -94,31 +104,8 @@ for surahNo in range(1, 115):
         "arabic2": [i[1] for i in ara],
         "bengali": [i for i in ben],
         "urdu": [i for i in urd],
+        "turkish": [i for i in tur],
     }
-    defaultChapterData = {
-        "surahName": surahName,
-        "surahNameArabic": surahNameAr,
-        "surahNameArabicLong": surahNameArLong,
-        "surahNameTranslation": surahNameTranslation,
-        "revelationPlace": revelationPlace,
-        "totalAyah": totalAyah,
-        "surahNo": surahNo,
-        "audio": {
-            i: {
-                "reciter": j,
-                "url": chapterAudio.format(i, surahNo),
-                "originalUrl": originalUrl[i].format(f"{surahNo:03}"),
-            }
-            for (i, j) in reciters.items()
-        },
-    }
-
-    finalData = defaultChapterData | chapterTranslations
-
-    # For specific translations
-    for lang, value in chapterTranslations.items():
-        _data = defaultChapterData | {lang: value}
-        translations[lang].append(_data)
 
     chapterAudioData = {
         i: {
@@ -128,6 +115,24 @@ for surahNo in range(1, 115):
         }
         for (i, j) in reciters.items()
     }
+
+    defaultChapterData = {
+        "surahName": surahName,
+        "surahNameArabic": surahNameAr,
+        "surahNameArabicLong": surahNameArLong,
+        "surahNameTranslation": surahNameTranslation,
+        "revelationPlace": revelationPlace,
+        "totalAyah": totalAyah,
+        "surahNo": surahNo,
+        "audio": chapterAudioData,
+    }
+
+    finalData = defaultChapterData | chapterTranslations
+
+    # For specific translations
+    for lang, value in chapterTranslations.items():
+        _data = defaultChapterData | {"translation": value}
+        translations[lang].append(_data)
 
     allSurahData.append(
         {
@@ -139,6 +144,9 @@ for surahNo in range(1, 115):
             "totalAyah": totalAyah,
         }
     )
+    for lang in nonMajor:
+        del finalData[lang]  # Remove the non-major translations from the final data
+
     makeJson(f"api/{surahNo}.json", finalData)
     makeJson(f"api/audio/{surahNo}.json", chapterAudioData)
     print()

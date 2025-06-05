@@ -4,6 +4,10 @@
 
 # Quran API
 
+<p align="center">
+  <img src="https://badges.pufler.dev/visits/The-Quran-Project/Quran-API?labelColor=gray&color=blue" />
+</p>
+
 This is a simple API that provides the verses of the Quran. Unlike other APIs, this API doesn't require any authentication. It's free and open for everyone without any rate limits.
 
 ## Note

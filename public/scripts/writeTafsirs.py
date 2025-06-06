@@ -1,4 +1,7 @@
 import os, json
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 folderPath = "api/tafsir"
@@ -17,3 +20,9 @@ for surahNo, surah in enumerate(tafsirs, 1):
         print(f"Written {fileName}")
 
 print("All tafsirs written successfully.")
+
+
+if os.environ.get("PROD"):
+    # Cloudflare Pages only supports max 25MB files.
+    os.remove("Data/tafsirs.json")
+    print("Removed Data/tafsirs.json as PROD environment variable is set.")

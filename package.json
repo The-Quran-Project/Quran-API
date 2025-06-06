@@ -4,7 +4,7 @@
   "description": "Quran API",
   "scripts": {
     "dev": "next dev",
-    "prebuild": "python public/scripts/main.py ",
+    "prebuild": "python -m pip install python-dotenv && python public/scripts/main.py ",
     "build": "next build",
     "start": "next start",
     "run": "next build && npx serve@latest out"

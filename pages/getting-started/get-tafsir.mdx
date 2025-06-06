@@ -1,0 +1,69 @@
+---
+title: Get the tafsir of a verse
+description: Get 3 major tafsir of a verse formatted in markdown style
+---
+
+import { Callout } from "nextra/components";
+
+## Request Format
+
+Make a **GET** request to `api/tafsir/<surahNo>_<ayahNo>.json`
+
+<Callout type="info">
+  Replace `<surahNo>` with the Surah Number and `<ayahNo>` with the Ayah Number.
+</Callout>
+
+## Available Tafsirs
+
+Currently, three major tafsirs are available:
+
+1. **Ibn Kathir**
+2. **Maarif Ul Quran**
+3. **Tazkirul Quran**
+
+## Response
+
+A _JSON_ object containing three major tafsirs of the requested verse, formatted in markdown style for easy rendering.
+
+### Example Response
+
+Endpoint: [`/api/tafsir/19_56.json`](/api/tafsir/19_56.json)
+
+```json copy
+{
+  "surahName": "Maryam",
+  "surahNo": 19,
+  "ayahNo": 56,
+  "tafsirs": [
+    {
+      "author": "Ibn Kathir",
+      "groupVerse": "You are reading a tafsir for the group of verses 19:56 to 19:57",
+      "content": "## Mentioning Idris\n\nAllah complimented Idris for being a truthful Prophet and He mentioned that he raised him to a high station. It has previously been mentioned that in the Sahih it is recorded that the Messenger of Allah ﷺ passed by Idris on the night of the Isra (Night Journey) and he (Idris) was in the fourth heaven..."
+    },
+    {
+      "author": "Maarif Ul Quran",
+      "groupVerse": null,
+      "content": "..."
+    },
+    {
+      "author": "Tazkirul Quran",
+      "groupVerse": "You are reading a tafsir for the group of verses 19:54 to 19:57",
+      "content": "..."
+    }
+  ]
+}
+```
+
+<Callout type="info">
+  The tafsir texts are formatted in markdown, allowing you to easily render them
+  with any markdown parser in your application.
+</Callout>
+
+
+See the [original tafsir](https://quran.com/19:56/tafsirs/en-tafisr-ibn-kathir) from quran.com
+
+## Notes
+
+- `groupVerse` will have a text when the tafsir is for a group of verses
+- The responses will vary from **3KB** to **88KB**
+- Tafsirs are taken from [Quran.com](https://quran.com)

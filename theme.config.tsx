@@ -14,16 +14,16 @@ const config: DocsThemeConfig = {
       title: "Quran API - Quran For Everyone",
     };
   },
-  // banner: {
-  //   key: "chapter-audio",
-  //   dismissible: true,
-  //   text: (
-  //     <a href="/getting-started/audio-recitation#audio-of-a-chapter">
-  //       🎉 Audio recitation of a whole chapter is available now.{" "}
-  //       <span className="text-blue-500">See Here →</span>
-  //     </a>
-  //   ),
-  // },
+  banner: {
+    key: "tafsir",
+    dismissible: true,
+    text: (
+      <a href="/getting-started/get-tafsir">
+        🎉 Tafsir of each verse is now available.{" "}
+        <span className="text-blue-500">See Here →</span>
+      </a>
+    ),
+  },
   logo: (
     <span className="logo">
       <img src="/logo.svg" width={30} height={30} alt="Quran API Logo" />

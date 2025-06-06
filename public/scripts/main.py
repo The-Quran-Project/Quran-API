@@ -1,7 +1,19 @@
 import os
+import re
 
 from config import reciters, recitersWithID, originalUrl
 from helper import makeDir, makeJson, readJsonFile, goToRightDir
+
+
+
+
+def remove_html_tags(text: str) -> str:
+    # Remove tags and their contents (like <tag ...>...</tag>)
+    text = re.sub(r'<[^>]+?>.*?</[^>]+?>', '', text)
+    # Remove self-closing or single tags (like <br>, <img />, etc.)
+    text = re.sub(r'<[^>]+?>', '', text)
+    return text.strip()
+
 
 
 goToRightDir()
@@ -18,6 +30,7 @@ quranEn = readJsonFile("quran_en.json")
 quranBn = readJsonFile("quran_bn.json")
 quranUr = readJsonFile("quran_ur.json")
 quranTr = readJsonFile("quran_tr.json")
+quranUz = readJsonFile("quran_uz.json")
 
 nonMajor = ["turkish"]  # save the whole json translation, but not the ayah by ayah
 
@@ -29,6 +42,7 @@ translations = {
     "bengali": [],
     "urdu": [],
     "turkish": [],
+    "uzbek": []
 }
 
 
@@ -38,6 +52,7 @@ for surahNo in range(1, 115):
     ben = quranBn[surahNo - 1]
     urd = quranUr[surahNo - 1]
     tur = quranTr[surahNo - 1]
+    uzb = quranUz[surahNo - 1]
 
     totalAyah = len(eng)
     surahInfo = surahData[surahNo - 1]
@@ -62,19 +77,19 @@ for surahNo in range(1, 115):
         bengali = ben[ayahNo - 1]
         urdu = urd[ayahNo - 1]
         ayahTranslations = {
-            "english": english,
-            "arabic1": arabic1,
-            "arabic2": arabic2,
-            "bengali": bengali,
-            "urdu": urdu,
+            "english": remove_html_tags(english),
+            "arabic1": remove_html_tags(arabic1),
+            "arabic2": remove_html_tags(arabic2),
+            "bengali": remove_html_tags(bengali),
+            "urdu": remove_html_tags(urdu),
         }
 
         defaultAyahData = {
-            "surahName": surahName,
-            "surahNameArabic": surahNameAr,
-            "surahNameArabicLong": surahNameArLong,
-            "surahNameTranslation": surahNameTranslation,
-            "revelationPlace": revelationPlace,
+            "surahName": surahName.strip(),
+            "surahNameArabic": surahNameAr.strip(),
+            "surahNameArabicLong": surahNameArLong.strip(),
+            "surahNameTranslation": surahNameTranslation.strip(),
+            "revelationPlace": revelationPlace.strip(),
             "totalAyah": totalAyah,
             "surahNo": surahNo,
             "ayahNo": ayahNo,
@@ -99,12 +114,13 @@ for surahNo in range(1, 115):
         print(f"Done {ayahNo} of {surahNo}\r", end="")
 
     chapterTranslations = {
-        "english": [i for i in eng],
-        "arabic1": [i[0] for i in ara],
-        "arabic2": [i[1] for i in ara],
-        "bengali": [i for i in ben],
-        "urdu": [i for i in urd],
-        "turkish": [i for i in tur],
+        "english": [remove_html_tags(i) for i in eng],
+        "arabic1": [remove_html_tags(i[0]) for i in ara],
+        "arabic2": [remove_html_tags(i[1]) for i in ara],
+        "bengali": [remove_html_tags(i) for i in ben],
+        "urdu": [remove_html_tags(i) for i in urd],
+        "turkish": [remove_html_tags(i) for i in tur],
+        "uzbek": [remove_html_tags(i) for i in uzb]
     }
 
     chapterAudioData = {
@@ -157,6 +173,7 @@ for lang, value in translations.items():
     makeJson(f"api/{lang}.json", value)
 
 
-# Generate the sitemap
+# Run other scripts
 os.system("python scripts/generateSitemap.py")
 os.system("python scripts/dumpTemplates.py")
+os.system("python scripts/writeTafsirs.py")

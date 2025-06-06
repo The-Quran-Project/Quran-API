@@ -20,6 +20,7 @@ We can technically provide more translations directly. But as not everyone will 
 But, we provide other translations too. But for that, you need to get the whole translation of the quran at once. These are:
 
 - Trukish
+- Uzbek
 
 More information [here](https://quranapi.pages.dev/getting-started/get-full-quran-translation)
 

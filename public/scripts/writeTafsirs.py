@@ -13,7 +13,8 @@ with open("Data/tafsirs.json", "rb") as file:
 
 
 for surahNo, surah in enumerate(tafsirs, 1):
-    for ayahNo, tafsir in enumerate(surah, 1):
+    for tafsir in surah:
+        ayahNo = tafsir["ayahNo"]
         fileName = f"{folderPath}/{surahNo}_{ayahNo}.json"
         with open(fileName, "w", encoding="utf-8") as file:
             json.dump(tafsir, file, ensure_ascii=False, indent=4)

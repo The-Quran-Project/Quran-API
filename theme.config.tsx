@@ -11,7 +11,7 @@ const config: DocsThemeConfig = {
       };
     }
     return {
-      title: "Quran API - Quran For Everyone",
+      title: "Quran API - Quran For Everyone, free and without rate limits",
     };
   },
   banner: {

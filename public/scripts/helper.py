@@ -6,9 +6,9 @@ def makeDir(folder_name):
         os.makedirs(folder_name)
 
 
-def makeJson(path, content):
+def makeJson(path, content, indent=4):
     with open(path, "w", encoding="utf8") as file:
-        json.dump(content, file, ensure_ascii=0, indent=4)
+        json.dump(content, file, ensure_ascii=0, indent=indent)
 
 
 def prettifyJson(data: dict):
@@ -30,3 +30,5 @@ def goToRightDir():
 
     if os.path.exists("public"):
         os.chdir("public")
+
+

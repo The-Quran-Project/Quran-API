@@ -2,18 +2,19 @@ import os
 import re
 
 from config import reciters, recitersWithID, originalUrl
-from helper import makeDir, makeJson, readJsonFile, goToRightDir
+from helper import makeDir, makeJson, readJsonFile, goToRightDir, prettifyJson
 
 
+def pprint(x: dict):
+    print(prettifyJson(x))
 
 
 def remove_html_tags(text: str) -> str:
     # Remove tags and their contents (like <tag ...>...</tag>)
-    text = re.sub(r'<[^>]+?>.*?</[^>]+?>', '', text)
+    text = re.sub(r"<[^>]+?>.*?</[^>]+?>", "", text)
     # Remove self-closing or single tags (like <br>, <img />, etc.)
-    text = re.sub(r'<[^>]+?>', '', text)
+    text = re.sub(r"<[^>]+?>", "", text)
     return text.strip()
-
 
 
 goToRightDir()
@@ -42,8 +43,13 @@ translations = {
     "bengali": [],
     "urdu": [],
     "turkish": [],
-    "uzbek": []
+    "uzbek": [],
 }
+
+# NOTE FROM DEVELOPER
+# There are *tons* of nesting here, i know! :)
+# I didn't try to simplify it further cuz this code isn't gonna be modified that often.
+# So, yeah. :3
 
 
 for surahNo in range(1, 115):
@@ -64,8 +70,8 @@ for surahNo in range(1, 115):
     # verseAudio = "https://quranaudio.pages.dev/{num}/{surahNo}_{ayahNo}.mp3" # discontinued due to total file limit
     # verseAudio = "https://github.com/The-Quran-Project/Quran-Audio/raw/refs/heads/data/Data/{num}/{surahNo}_{ayahNo}.mp3" # github raw
 
-    verseOriginalAudio = "https://everyayah.com/data/{name}/{surah}{ayah}.mp3"
     verseAudio = "https://the-quran-project.github.io/Quran-Audio/Data/{num}/{surahNo}_{ayahNo}.mp3"
+    verseOriginalAudio = "https://everyayah.com/data/{name}/{surah}{ayah}.mp3"
     chapterAudio = "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/{}/{}.mp3"
 
     # Make the folder
@@ -120,7 +126,7 @@ for surahNo in range(1, 115):
         "bengali": [remove_html_tags(i) for i in ben],
         "urdu": [remove_html_tags(i) for i in urd],
         "turkish": [remove_html_tags(i) for i in tur],
-        "uzbek": [remove_html_tags(i) for i in uzb]
+        "uzbek": [remove_html_tags(i) for i in uzb],
     }
 
     chapterAudioData = {
@@ -147,7 +153,29 @@ for surahNo in range(1, 115):
 
     # For specific translations
     for lang, value in chapterTranslations.items():
-        _data = defaultChapterData | {"translation": value}
+        _data = defaultChapterData | {
+            "verseAudio": {
+                i: {
+                    "reciter": j,
+                    "audios": [
+                        {
+                            "url": verseAudio.format(
+                                num=i, surahNo=surahNo, ayahNo=ayahNo
+                            ),
+                            "originalUrl": verseOriginalAudio.format(
+                                name=recitersWithID[i],
+                                surah=f"{surahNo:03}",
+                                ayah=f"{ayahNo:03}",
+                            ),
+                        } for ayahNo in range(1, totalAyah+1)
+                    ],
+                }
+                for (i, j) in reciters.items()
+            },
+            "translation": value,
+        }
+
+        # pprint(_data["verseAudio"])
         translations[lang].append(_data)
 
     allSurahData.append(
@@ -170,7 +198,7 @@ for surahNo in range(1, 115):
 
 makeJson("api/surah.json", allSurahData)
 for lang, value in translations.items():
-    makeJson(f"api/{lang}.json", value)
+    makeJson(f"api/{lang}.json", value, indent=None)
 
 
 # Run other scripts

@@ -1,6 +1,6 @@
 {
   "name": "quran-api",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Quran API",
   "scripts": {
     "dev": "next dev",

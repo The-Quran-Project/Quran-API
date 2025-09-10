@@ -18,9 +18,9 @@ for surahNo, surah in enumerate(tafsirs, 1):
         fileName = f"{folderPath}/{surahNo}_{ayahNo}.json"
         with open(fileName, "w", encoding="utf-8") as file:
             json.dump(tafsir, file, ensure_ascii=False, indent=4)
-        print(f"Written {fileName}")
+        print(f"Written {fileName}", end='\r')
 
-print("All tafsirs written successfully.")
+print("\nAll tafsirs written successfully.\n")
 
 
 if os.environ.get("PROD"):

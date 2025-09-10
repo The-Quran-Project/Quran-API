@@ -26,12 +26,17 @@ Currently, the following translations are available:
 You should use this if you're building an app and want to get the response once and store it in your database.
 You can also use this if you want to get the translation in a specific language.
 
+So if you want the whole dump of **Quran API**, just download the file(s).
+
 ## Response
 
 A _*JSON*_ object containing the whole translation.
 
+The response is not **pretty-printed** to reduce the file size.
+
 <Callout>
-  The response will be very large. 10,500+ lines long and 1.5MB+ in size
+  The response will be very large, 5MB+ in size.
+  So, be careful before clicking on the `.json` link.
 </Callout>
 
 ### Example Response
@@ -59,12 +64,40 @@ Endpoint: [`/api/english.json`](/api/english.json)
                 "url": "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/2/1.mp3",
                 "originalUrl": "https://server11.mp3quran.net/shatri/001.mp3"
             },
-            "3": {
-                "reciter": "Nasser Al Qatami",
-                "url": "https://github.com/The-Quran-Project/Quran-Audio-Chapters/raw/refs/heads/main/Data/3/1.mp3",
-                "originalUrl": "https://server6.mp3quran.net/qtm/001.mp3"
+            ...
+        },
+        "verseAudio": {
+            "1": {
+                "reciter": "Mishary Rashid Al Afasy",
+                "audios": [
+                    {
+                        "url": "https://the-quran-project.github.io/Quran-Audio/Data/1/1_1.mp3",
+                        "originalUrl": "https://everyayah.com/data/Alafasy_128kbps/001001.mp3"
+                    },
+                    {
+                        "url": "https://the-quran-project.github.io/Quran-Audio/Data/1/1_2.mp3",
+                        "originalUrl": "https://everyayah.com/data/Alafasy_128kbps/001002.mp3"
+                    },
+                    ...
+                ]
+            },
+            "2": {
+                "reciter": "Abu Bakr Al Shatri",
+                "audios": [
+                    {
+                        "url": "https://the-quran-project.github.io/Quran-Audio/Data/2/1_1.mp3",
+                        "originalUrl": "https://everyayah.com/data/Abu_Bakr_Ash-Shaatree_128kbps/001001.mp3"
+                    },
+                    {
+                        "url": "https://the-quran-project.github.io/Quran-Audio/Data/2/1_2.mp3",
+                        "originalUrl": "https://everyayah.com/data/Abu_Bakr_Ash-Shaatree_128kbps/001002.mp3"
+                    },
+                    ...
+                ]
             },
             ...
+                ]
+            }
         },
         "translation": [
             "In the Name of Allah—the Most Compassionate, Most Merciful.",
@@ -81,7 +114,11 @@ Endpoint: [`/api/english.json`](/api/english.json)
         "surahNameArabic": "البقرة",
         "surahNameArabicLong": "سورة البقرة",
         "surahNameTranslation": "The Cow",
+        "revelationPlace": "Madina",
+        "totalAyah": 286,
+        "surahNo": 2,
         ...
     },
     ...
+]
 ```

@@ -20,23 +20,55 @@ import { Callout } from "nextra/components";
 
 ### Request format
 
-Make a **GET** request to `/<reciterNo>/<surahNo>_<ayahNo>.mp3`
+Make a **GET** request to `/audio/<surahNo>/<ayahNo>.json`
 
 #### Example
 
-Endpoint: [`/2/1_2.mp3`](https://the-quran-project.github.io/Quran-Audio/Data/2/1_2.mp3)<br />Raw Url: https://the-quran-project.github.io/Quran-Audio/Data/2/1_2.mp3
+Endpoint: [`/audio/2/1.json`](/api/audio/2/1.json)<br />
 
-<br />
-<br />
-> The previous url: `quranaudio.pages.dev/<reciterNo>/<surahNo>_<ayahNo>.mp3` is still available. But there are only **3** reciters in that. It is because of the 25k total file limit from cloudflare pages.
-
+Raw Url: https://quranapi.pages.dev/api/audio/2/1.json
 
 ### Response
 
-A `mp3` file will be returned.
+```json copy
+{
+   "1": {
+      "reciter": "Mishary Rashid Al Afasy",
+      "url": "https://the-quran-project.github.io/Quran-Audio/Data/1/2_1.mp3",
+      "originalUrl": "https://everyayah.com/data/Alafasy_128kbps/002001.mp3"
+   },
+   "2": {
+      "reciter": "Abu Bakr Al Shatri",
+      "url": "https://the-quran-project.github.io/Quran-Audio/Data/2/2_1.mp3",
+      "originalUrl": "https://everyayah.com/data/Abu_Bakr_Ash-Shaatree_128kbps/002001.mp3"
+   },
+   "3": {
+      "reciter": "Nasser Al Qatami",
+      "url": "https://the-quran-project.github.io/Quran-Audio/Data/3/2_1.mp3",
+      "originalUrl": "https://everyayah.com/data/Nasser_Alqatami_128kbps/002001.mp3"
+   },
+   "4": {
+      "reciter": "Yasser Al Dosari",
+      "url": "https://the-quran-project.github.io/Quran-Audio/Data/4/2_1.mp3",
+      "originalUrl": "https://everyayah.com/data/Yasser_Ad-Dussary_128kbps/002001.mp3"
+   },
+   "5": {
+      "reciter": "Hani Ar Rifai",
+      "url": "https://the-quran-project.github.io/Quran-Audio/Data/5/2_1.mp3",
+      "originalUrl": "https://everyayah.com/data/Hani_Rifai_192kbps/002001.mp3"
+   }
+}
+```
+
+> The previous url: `quranaudio.pages.dev/<reciterNo>/<surahNo>_<ayahNo>.mp3` is still available. But there are only **3** reciters in that. It is because of the `25k` total file limit from cloudflare pages.
 
 <br />
-<audio src="https://the-quran-project.github.io/Quran-Audio/Data/2/1_2.mp3" controls />
+Use the links to get the audio file. Example:
+`https://the-quran-project.github.io/Quran-Audio/Data/2/1_2.mp3`
+
+<audio
+  src="https://the-quran-project.github.io/Quran-Audio/Data/2/1_2.mp3"
+  controls/>
 
 <br />
 <br />

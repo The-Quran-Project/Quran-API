@@ -28,6 +28,7 @@ replacements = {
     "audio-recitation.mdx": {
         "RECITER_ID_AND_NAME_TABLE": createReciterTable(reciters),
         "AUDIO_2_RESPONSE": readJsonFile("audio/2.json", "api", prettify=True),
+        "AUDIO_2_VERSE_RESPONSE": readJsonFile("audio/2/1.json", "api", prettify=True),
     },
     "get-a-verse.mdx": {
         "VERSE_2_RESPONSE": readJsonFile("1/2.json", "api", prettify=True),

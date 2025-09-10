@@ -89,6 +89,18 @@ for surahNo in range(1, 115):
             "bengali": remove_html_tags(bengali),
             "urdu": remove_html_tags(urdu),
         }
+        ayahAudioData = {
+            i: {
+                "reciter": j,
+                "url": verseAudio.format(num=i, surahNo=surahNo, ayahNo=ayahNo),
+                "originalUrl": verseOriginalAudio.format(
+                    name=recitersWithID[i],
+                    surah=f"{surahNo:03}",
+                    ayah=f"{ayahNo:03}",
+                ),
+            }
+            for (i, j) in reciters.items()
+        }
 
         defaultAyahData = {
             "surahName": surahName.strip(),
@@ -99,23 +111,14 @@ for surahNo in range(1, 115):
             "totalAyah": totalAyah,
             "surahNo": surahNo,
             "ayahNo": ayahNo,
-            "audio": {
-                i: {
-                    "reciter": j,
-                    "url": verseAudio.format(num=i, surahNo=surahNo, ayahNo=ayahNo),
-                    "originalUrl": verseOriginalAudio.format(
-                        name=recitersWithID[i],
-                        surah=f"{surahNo:03}",
-                        ayah=f"{ayahNo:03}",
-                    ),
-                }
-                for (i, j) in reciters.items()
-            },
+            "audio": ayahAudioData,
         }
 
         ayahData = defaultAyahData | ayahTranslations
 
         makeJson(f"api/{surahNo}/{ayahNo}.json", ayahData)
+        makeDir(f'api/audio/{surahNo}/')
+        makeJson(f"api/audio/{surahNo}/{ayahNo}.json", ayahAudioData)
 
         print(f"Done {ayahNo} of {surahNo}\r", end="")
 
@@ -167,7 +170,8 @@ for surahNo in range(1, 115):
                                 surah=f"{surahNo:03}",
                                 ayah=f"{ayahNo:03}",
                             ),
-                        } for ayahNo in range(1, totalAyah+1)
+                        }
+                        for ayahNo in range(1, totalAyah + 1)
                     ],
                 }
                 for (i, j) in reciters.items()

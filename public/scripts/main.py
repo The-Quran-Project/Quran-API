@@ -33,7 +33,8 @@ quranUr = readJsonFile("quran_ur.json")
 quranTr = readJsonFile("quran_tr.json")
 quranUz = readJsonFile("quran_uz.json")
 
-nonMajor = ["turkish"]  # save the whole json translation, but not the ayah by ayah
+# Translations that are not major (i.e., not included in the main surah data)
+nonMajor = ["turkish", "uzbek"]  # save the whole json translation, but not the ayah by ayah or whole chapter data
 
 allSurahData = []
 translations = {

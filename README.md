@@ -72,4 +72,4 @@ The data is taken from [Quran.com](https://quran.com).
 
 # Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=The-Quran-Project/Quran-API&type=Date)](https://star-history.com/#The-Quran-Project/Quran-API&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=The-Quran-Project/Quran-API&type=Date&theme=dark)]([https://star-history.com/#The-Quran-Project/Quran-API&Date&theme=Dark](https://api.star-history.com/svg?repos=The-Quran-Project/Quran-API&type=Date&theme=dark))

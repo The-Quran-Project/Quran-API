@@ -18,7 +18,10 @@ const config: DocsThemeConfig = {
     key: "tafsir-surah",
     dismissible: true,
     text: (
-      <a href="/getting-started/get-tafsir" className="tracking-wider">
+      <a
+        href="/getting-started/get-tafsir#tafsir-of-a-surah"
+        className="tracking-wider"
+      >
         🎉 Tafsir of whole surah is now available.{" "}
         <span className="text-blue-500">See Here →</span>
       </a>

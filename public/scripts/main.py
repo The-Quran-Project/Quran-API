@@ -34,7 +34,10 @@ quranTr = readJsonFile("quran_tr.json")
 quranUz = readJsonFile("quran_uz.json")
 
 # Translations that are not major (i.e., not included in the main surah data)
-nonMajor = ["turkish", "uzbek"]  # save the whole json translation, but not the ayah by ayah or whole chapter data
+nonMajor = [
+    "turkish",
+    "uzbek",
+]  # save the whole json translation, but not the ayah by ayah or whole chapter data
 
 allSurahData = []
 translations = {
@@ -118,10 +121,14 @@ for surahNo in range(1, 115):
         ayahData = defaultAyahData | ayahTranslations
 
         makeJson(f"api/{surahNo}/{ayahNo}.json", ayahData)
-        makeDir(f'api/audio/{surahNo}/')
+        makeDir(f"api/audio/{surahNo}/")
         makeJson(f"api/audio/{surahNo}/{ayahNo}.json", ayahAudioData)
 
-        print(f"Done {ayahNo} of {surahNo}\r", end="")
+        # I know there are better ways, I'm just lazy.
+        print(
+            f"\033[92m[main.py]\033[0m => Done \033[93m{surahNo}\033[0m:\033[96m{ayahNo}\033[0m\r",
+            end="",
+        )
 
     chapterTranslations = {
         "english": [remove_html_tags(i) for i in eng],

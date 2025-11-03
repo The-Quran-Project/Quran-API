@@ -47,4 +47,6 @@ for file_name, replacement_dict in replacements.items():
         file = file.replace(placeholder, replacement)
 
     writeFile(file_name, file)
-    print(f"Created {file_name} with replacements: {list(replacement_dict.keys())}")
+    print(
+        f"\033[95mCreated {file_name}\033[0m with replacements: \033[94m{', '.join(list(replacement_dict.keys()))}\033[0m"
+    )

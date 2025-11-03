@@ -5,14 +5,6 @@ description: Get 3 major tafsir of a verse formatted in markdown style
 
 import { Callout } from "nextra/components";
 
-## Request Format
-
-Make a **GET** request to `api/tafsir/<surahNo>_<ayahNo>.json`
-
-<Callout type="info">
-  Replace `<surahNo>` with the Surah Number and `<ayahNo>` with the Ayah Number.
-</Callout>
-
 ## Available Tafsirs
 
 Currently, three major tafsirs are available:
@@ -21,9 +13,32 @@ Currently, three major tafsirs are available:
 2. **Maarif Ul Quran**
 3. **Tazkirul Quran**
 
-## Response
+<details>
+  <summary>**Good to know**</summary>
 
-A _JSON_ object containing three major tafsirs of the requested verse, formatted in markdown style for easy rendering.
+- The `content` text is in **MarkDown** format, so you can render it easily.
+- `groupVerse` will have a text when the tafsir is for a group of verses. Otherwise, `null`
+- The responses for _ayah_ will vary from **3KB** to **88KB**
+- The responses for _surah_ will vary from **50KB** to **4MB**
+- Tafsirs are taken from [Quran.com](https://quran.com)
+
+</details>
+
+
+<Callout type="info">
+  Replace `<surahNo>` with the Surah Number and `<ayahNo>` with the Ayah Number.
+</Callout>
+
+
+## Tafsir of an Ayah
+
+### Request Format
+
+Make a **GET** request to `api/tafsir/<surahNo>_<ayahNo>.json`
+
+### Response
+
+A _JSON_ object containing three major tafsirs of the requested verse.
 
 ### Example Response
 
@@ -54,16 +69,52 @@ Endpoint: [`/api/tafsir/19_56.json`](/api/tafsir/19_56.json)
 }
 ```
 
-<Callout type="info">
-  The tafsir texts are formatted in markdown, allowing you to easily render them
-  with any markdown parser in your application.
-</Callout>
-
-
 See the [original tafsir](https://quran.com/19:56/tafsirs/en-tafisr-ibn-kathir) from quran.com
 
-## Notes
+## Tafsir of a Surah
 
-- `groupVerse` will have a text when the tafsir is for a group of verses
-- The responses will vary from **3KB** to **88KB**
-- Tafsirs are taken from [Quran.com](https://quran.com)
+### Request Format
+
+Make a **GET** request to `api/tafsir/<surahNo>.json`
+
+### Response
+
+A _JSON_ object containing three major tafsirs of the requested surah with all the verses.
+
+### Example Response
+
+Endpoint: [`/api/tafsir/19.json`](/api/tafsir/19.json)
+
+```json copy
+{
+    "surahName": "Maryam",
+    "totalVerse": 98,
+    "tafsirs": [
+        [
+            {
+                "author": "Ibn Kathir",
+                "groupVerse": "You are reading a tafsir for the group of verses 19:1 to 19:6",
+                "content": "## Which was revealed in Makkah\n\nMuhammad bin Ishaq recorded a Hadith of Umm Salamah in his Sirah, and Ahmad bin Hanbal recorded from Ibn Mas`ud, the story of the Hijrah (migration) to Ethiopia from Makkah..."
+            },
+            {
+                "author": "Maarif Ul Quran",
+                "groupVerse": "...",
+                "content": "..."
+            },
+            {
+                "author": "Tazkirul Quran",
+                "groupVerse": "...",
+                "content": "..."
+            }
+        ],
+        [
+            {
+                "author": "Ibn Kathir",
+                "groupVerse": "...",
+                "content": "..."
+            },
+            ...
+        ],
+        ...
+}
+```

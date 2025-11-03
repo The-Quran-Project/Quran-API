@@ -15,6 +15,13 @@ def prettifyJson(data: dict):
     return json.dumps(data, indent=3, ensure_ascii=False)
 
 
+def pprint(data: dict):
+    try:
+        print(prettifyJson(data))
+    except:
+        print(data)
+
+
 def readJsonFile(path: str, folder: str = "Data", prettify: bool = False):
     with open(f"{folder}/{path}", "r", encoding="utf8") as file:
         file = json.load(file)
@@ -32,3 +39,9 @@ def goToRightDir():
         os.chdir("public")
 
 
+goToRightDir()
+surahNames = readJsonFile("surah.json")
+
+
+def getSurahName(surahNo: int):
+    return surahNames[int(surahNo) - 1]

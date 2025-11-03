@@ -15,11 +15,11 @@ const config: DocsThemeConfig = {
     };
   },
   banner: {
-    key: "tafsir",
+    key: "tafsir-surah",
     dismissible: true,
     text: (
-      <a href="/getting-started/get-tafsir">
-        🎉 Tafsir of each verse is now available.{" "}
+      <a href="/getting-started/get-tafsir" className="tracking-wider">
+        🎉 Tafsir of whole surah is now available.{" "}
         <span className="text-blue-500">See Here →</span>
       </a>
     ),

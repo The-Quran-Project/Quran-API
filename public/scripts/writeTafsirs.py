@@ -1,5 +1,6 @@
 import os, json
 from dotenv import load_dotenv
+from helper import pprint, makeJson, getSurahName, readJsonFile
 
 load_dotenv()
 
@@ -12,15 +13,36 @@ with open("Data/tafsirs.json", "rb") as file:
     tafsirs = json.load(file)
 
 
+# a = tafsirs[0][0]["tafsirs"]
+# pprint(a[0].keys())
+
+
+# exit(1)
+
 for surahNo, surah in enumerate(tafsirs, 1):
+    surahName = getSurahName(surahNo)
+
+    surahTafsirPath = f"{folderPath}/{surahNo}.json"
+    surahTafsir = {
+        "surahName": surahName,
+        "totalVerse": len(surah),
+        "tafsirs": [i["tafsirs"] for i in surah],
+    }
+    makeJson(surahTafsirPath, surahTafsir)
+
     for tafsir in surah:
         ayahNo = tafsir["ayahNo"]
-        fileName = f"{folderPath}/{surahNo}_{ayahNo}.json"
-        with open(fileName, "w", encoding="utf-8") as file:
-            json.dump(tafsir, file, ensure_ascii=False, indent=4)
-        print(f"Written {fileName}", end='\r')
+        # tafsirData = tafsir["tafsir"]
+        # author = tafsirData["author"]
+        # groupVerse = tafsirData["groupVerse"]
+        # content = tafsirData["content"]  # tafsir in `MD` format
 
-print("\nAll tafsirs written successfully.\n")
+        ayahTafsirPath = f"{folderPath}/{surahNo}_{ayahNo}.json"
+        makeJson(ayahTafsirPath, tafsir)
+
+        # print(f"Tafsir Written {ayahTafsirPath}", end="\r")
+
+print(f"\033[92m[writeTafsirs.py]\033[0m => All tafsirs written successfully.\n")
 
 
 if os.environ.get("PROD"):

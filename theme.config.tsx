@@ -79,9 +79,21 @@ const config: DocsThemeConfig = {
           type="image/svg+xml"
           media="(prefers-color-scheme: dark)"
         />
+
+        {/* Google Search Console */}
         <meta
           name="google-site-verification"
           content="WPPXho-ehsTzL41OYAECiVP8ilWMxfxjHtHwQUsu1FU"
+        />
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-E4NHC60EWC"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-E4NHC60EWC');`,
+          }}
         />
       </>
     );

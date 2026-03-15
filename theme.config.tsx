@@ -62,6 +62,7 @@ const config: DocsThemeConfig = {
 
     return (
       <>
+        <meta property="og:site_name" content="Quran API"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Language" content="en" />
         <meta name="og:image" content={socialCard} />

@@ -49,7 +49,9 @@ docker build -t quran-api . && docker run -p 3000:3000 quran-api
 git clone https://github.com/The-Quran-Project/Quran-API/ --depth 1
 cd Quran-API
 npm i --loglevel=error
-python public/scripts/main.py
+cd public
+python scripts/main.py
+cd .. 
 npm run build
 npx -y serve@latest out
 ```

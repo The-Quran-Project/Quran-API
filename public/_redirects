@@ -1,3 +1,6 @@
 /api /web_index.json 200
+/api/ /web_index.json 200
 /tafsir /getting-started/get-tafsir 301
 /juz /getting-started/by-juz 301
+/tafsir/ /getting-started/get-tafsir 301
+/juz/ /getting-started/by-juz 301

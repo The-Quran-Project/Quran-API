@@ -1,0 +1,206 @@
+---
+title: Juz Info - Quran API
+description: Retrieve all 30 Juz or a specific Juz in structured JSON format using Quran API.
+---
+
+import { Callout } from "nextra/components";
+
+
+## Get Juz Info
+
+Get information about the 30 Juz of the Quran.
+
+### Request Format
+
+Make a **GET** request to `api/juz.json`
+
+### Response
+
+A _JSON_ object containing info about the 30 juz. Each juz key contains an array with all the surahs that are in that juz.
+
+### Example Response
+
+Endpoint: [`/api/juz.json`](/api/juz.json)
+
+```json copy
+"1": [
+    {
+        "surahName": "Al-Faatiha",
+        "surahNameArabic": "الفاتحة",
+        "surahNameArabicLong": "سُورَةُ ٱلْفَاتِحَةِ",
+        "surahNameTranslation": "The Opening",
+        "revelationPlace": "Mecca",
+        "totalAyah": 7,
+        "surahNo": 1,
+        "juzNum": 1,
+        "verseStart": 1,
+        "verseEnd": 7,
+        "range": "1:1-7"
+    },
+    {
+        "surahName": "Al-Baqara",
+        "surahNameArabic": "البقرة",
+        "surahNameArabicLong": "سورة البقرة",
+        "surahNameTranslation": "The Cow",
+        "revelationPlace": "Madina",
+        "totalAyah": 286,
+        "surahNo": 2,
+        "juzNum": 1,
+        "verseStart": 1,
+        "verseEnd": 141,
+        "range": "2:1-141"
+    }
+],
+"2": [
+    {
+        "surahName": "Al-Baqara",
+        "surahNameArabic": "البقرة",
+        ...
+    }
+],
+...
+}
+```
+
+
+## Get a specific Juz
+
+Get any of the juz from 1 to 30.
+
+### Request Format
+
+Make a **GET** request to `api/juz/<juzNum>.json`
+
+<Callout type="info">
+    Hello
+</Callout>
+
+### Response
+
+A _JSON_ object containing info about the specific juz.
+
+### Example Response
+
+Endpoint: [`/api/juz/1.json`](/api/juz/1.json)
+
+```json copy
+[
+    {
+        "surahName": "Al-Faatiha",
+        "surahNameArabic": "الفاتحة",
+        "surahNameArabicLong": "سُورَةُ ٱلْفَاتِحَةِ",
+        "surahNameTranslation": "The Opening",
+        "revelationPlace": "Mecca",
+        "totalAyah": 7,
+        "surahNo": 1,
+        "juzNum": 1,
+        "verseStart": 1,
+        "verseEnd": 7,
+        "range": "1:1-7",
+        "english": [
+            "In the Name of Allah—the Most Compassionate, Most Merciful.",
+            "All praise is for Allah—Lord of all worlds",
+            "the Most Compassionate, Most Merciful",
+            "Master of the Day of Judgment.",
+            "You ˹alone˺ we worship and You ˹alone˺ we ask for help.",
+            "Guide us along the Straight Path",
+            "the Path of those You have blessed—not those You are displeased with, or those who are astray."
+        ],
+        "arabic1": [
+          ...
+        ],
+        "arabic2": [
+          ...
+        ],
+        "bengali": [
+          ...
+        ],
+        "urdu": [
+          ...
+        ]
+    },
+    {
+        "surahName": "Al-Baqara",
+        "surahNameArabic": "البقرة",
+        "surahNameArabicLong": "سورة البقرة",
+        "surahNameTranslation": "The Cow",
+        "revelationPlace": "Madina",
+        "totalAyah": 286,
+        "surahNo": 2,
+        "juzNum": 1,
+        "verseStart": 1,
+        "verseEnd": 141,
+        "range": "2:1-141",
+        "english": [
+          ...
+        ],
+        ...
+    }
+]
+```
+
+
+
+## Get all the Juz of a specific language
+
+Get the entire juz list for a specific language. Check [Available Languages](/languages) to see if your translation is provided.
+
+### Request Format
+
+Make a **GET** request to `api/juz/<language>.json`
+
+### Response
+
+A _JSON_ object containing info about the 30 juz.
+
+### Example Response
+
+Endpoint: [`/api/juz/english.json`](/api/juz/english.json)
+
+```json copy
+
+[
+    [
+        {
+            "surahName": "Al-Faatiha",
+            "surahNameArabic": "الفاتحة",
+            "surahNameArabicLong": "سُورَةُ ٱلْفَاتِحَةِ",
+            "surahNameTranslation": "The Opening",
+            "revelationPlace": "Mecca",
+            "totalAyah": 7,
+            "surahNo": 1,
+            "juzNum": 1,
+            "verseStart": 1,
+            "verseEnd": 7,
+            "range": "1:1-7",
+            "translation": [
+                "In the Name of Allah—the Most Compassionate, Most Merciful.",
+                "All praise is for Allah—Lord of all worlds",
+                "the Most Compassionate, Most Merciful",
+                "Master of the Day of Judgment.",
+                "You ˹alone˺ we worship and You ˹alone˺ we ask for help.",
+                "Guide us along the Straight Path",
+                "the Path of those You have blessed—not those You are displeased with, or those who are astray."
+            ]
+        },
+        {
+            "surahName": "Al-Baqara",
+            "surahNameArabic": "البقرة",
+            "surahNameArabicLong": "سورة البقرة",
+            "surahNameTranslation": "The Cow",
+            "revelationPlace": "Madina",
+            "totalAyah": 286,
+            "surahNo": 2,
+            "juzNum": 1,
+            "verseStart": 1,
+            "verseEnd": 141,
+            "range": "2:1-141",
+            "translation": [
+                "Alif-Lãm-Mĩm.",
+                ...
+            ]
+        }
+    ],
+    ...
+]
+```

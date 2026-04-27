@@ -3,11 +3,12 @@
   "getting-started": "Getting Started 🚀",
   "resources": "Resources",
   "about": "About",
+  "contact": "Contact Us",
   "index": {
     "type": "page",
     "display": "hidden"
   },
-  "docs":{
+  "docs": {
     "type": "doc",
     "display": "hidden"
   }

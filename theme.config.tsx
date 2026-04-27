@@ -15,14 +15,11 @@ const config: DocsThemeConfig = {
     };
   },
   banner: {
-    key: "tafsir-surah",
+    key: "juz-info",
     dismissible: true,
     text: (
-      <a
-        href="/getting-started/get-tafsir#tafsir-of-a-surah"
-        className="tracking-wider"
-      >
-        🎉 Tafsir of whole surah is now available.{" "}
+      <a href="/getting-started/by-juz" className="tracking-wider">
+        Quran API now provides <b>Juz</b> info.{" "}
         <span className="text-blue-500">See Here →</span>
       </a>
     ),
@@ -62,7 +59,7 @@ const config: DocsThemeConfig = {
 
     return (
       <>
-        <meta property="og:site_name" content="Quran API"/>
+        <meta property="og:site_name" content="Quran API" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Language" content="en" />
         <meta name="og:image" content={socialCard} />

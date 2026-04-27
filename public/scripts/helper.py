@@ -22,8 +22,8 @@ def pprint(data: dict):
         print(data)
 
 
-def readJsonFile(path: str, folder: str = "Data", prettify: bool = False):
-    with open(f"{folder}/{path}", "r", encoding="utf8") as file:
+def readJsonFile(fileName: str, folder: str = "Data", prettify: bool = False):
+    with open(f"{folder}/{fileName}", "r", encoding="utf8") as file:
         file = json.load(file)
         if prettify:
             return prettifyJson(file)

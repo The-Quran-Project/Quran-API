@@ -1,7 +1,12 @@
 import os
+from helper import goToRightDir
 
-os.system("python public/scripts/writeSurahs.py")
-os.system("python public/scripts/makeJuz.py")
-os.system("python public/scripts/generateSitemap.py")
-os.system("python public/scripts/dumpTemplates.py")
-os.system("python public/scripts/writeTafsirs.py")
+
+goToRightDir()
+
+
+os.system("python scripts/writeSurahs.py")
+os.system("python scripts/makeJuz.py")
+os.system("python scripts/generateSitemap.py")
+os.system("python scripts/dumpTemplates.py")
+os.system("python scripts/writeTafsirs.py")

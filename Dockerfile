@@ -8,7 +8,7 @@ RUN git clone https://github.com/The-Quran-Project/Quran-API . --depth 1
 
 RUN npm i --loglevel=error
 RUN npm i serve -g --loglevel=error
-RUN python3 public/main.py
+RUN python3 public/scripts/main.py
 RUN npm run build
 
 EXPOSE 3000
